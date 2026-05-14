@@ -1,46 +1,14 @@
-
+{% extends "base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BarberShop</title>
-    <link rel="stylesheet" href="{% static 'css/style3.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <body>
-         <!-- HEADER -->
-
-  <header class="header">
-    <div class="header-content">
-      <div class="logo">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOwh0nGfp2iAFj4DMenJgSv0HglMnKL4bsaw&s"  alt="" >
-        
-        <h2>Praveen Hair Salon</h2>
-      </div>
-
-      <nav>
-        <ul class="nav-links">
-          <li><a href="/blogs/home/">Home</a></li>
-          <li><a href="/blogs/services/">Services</a></li>
-          <li><a href="/blogs/gallery/">Gallery</a></li>
-          <li><a href="/blogs/booking/">Booking</a></li>
-          <li><a href="/blogs/contact/">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  
-
-
-
-  </header>
-
+{% block title %}Home - Praveen Hair Salon{% endblock %}
+{% block content %}
   <!-- HERO SECTION -->
 
   <section class="hero">
+    <div class="hero-overlay"></div>
 
     <div class="hero-content">
+      <span class="hero-label">Trusted salon for modern grooming & beauty</span>
       <h1>Modern Hair Style & Beauty Salon</h1>
       <p>
         Professional haircut, beard styling, hair spa and facial services
@@ -48,8 +16,34 @@
       </p>
 
       <div class="hero-buttons">
-        <a href="/blogs/booking/" class="btn">Book Appointment</a>
-        <a href="/blogs/services/" class="btn btn-outline">View Services</a>
+        <a href="/booking/" class="btn">Book Appointment</a>
+        <a href="/services/" class="btn btn-outline">View Services</a>
+      </div>
+
+      <div class="hero-tags">
+        <span>Expert Stylists</span>
+        <span>Premium Care</span>
+        <span>Hygienic Salon</span>
+        <span>Quick Booking</span>
+      </div>
+
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <strong>1.2k+</strong>
+          <p>Happy Clients</p>
+        </div>
+        <div class="hero-stat">
+          <strong>15+</strong>
+          <p>Years Experience</p>
+        </div>
+        <div class="hero-stat">
+          <strong>40+</strong>
+          <p>Service Options</p>
+        </div>
+        <div class="hero-stat">
+          <strong>24/7</strong>
+          <p>Online Support</p>
+        </div>
       </div>
     </div>
 
@@ -120,29 +114,50 @@
   <!-- ABOUT -->
 
   <section class="about">
-
     <div class="about-image">
-       <img src="{% static 'images/image16.png' %}"  alt="Shampoo">
+      <img src="{% static 'images/image16.png' %}"  alt="Salon team and clients">
+      <div class="about-badge">
+        <span>Top Rated Salon</span>
+      </div>
     </div>
 
     <div class="about-content">
-      <h2>About Our Salon</h2>
+      <span class="section-subtitle">About Our Salon</span>
+      <h2>Beauty, Style & Confidence Delivered</h2>
 
       <p>
-        Praveen Hair Salon provides professional salon services with
-        experienced staff and modern equipment. Our goal is to provide
-        the best grooming and beauty experience.
-        <br>
-        Experience a transformation that goes beyond the mirror. We blend expert artistry with a personal touch to reveal your most confident self. Our passion for detail ensures every cut, color, and treatment is a masterpiece tailored exclusively to you. Step into a sanctuary of style where your hair isn't just serviced—it's celebrated. Your best look is our highest calling.
+        Praveen Hair Salon provides professional salon services with experienced staff and modern equipment. Our goal is to deliver a premium grooming experience where every client leaves feeling refreshed and confident.
       </p>
-      <div class="buttons">
-        <a href="#" class="btn">Read More</a>
-        <a href="#" class="btn">Why Choose Us</a>
+      <p>
+        We combine expert artistry, personalized care, and hygienic service to create a sanctuary of style. From precision cuts to elegant looks, every treatment is crafted to enhance your natural beauty.
+      </p>
+
+      <div class="about-highlights">
+        <div class="about-card">
+          <h3>Expert Stylists</h3>
+          <p>Highly trained professionals deliver flawless cuts and styling.</p>
+        </div>
+        <div class="about-card">
+          <h3>Premium Products</h3>
+          <p>Only salon-grade products for healthy hair and glowing skin.</p>
+        </div>
+        <div class="about-card">
+          <h3>Comfort First</h3>
+          <p>Relax in a hygienic, modern environment with attentive service.</p>
+        </div>
       </div>
 
+      <ul class="about-list">
+        <li>Personalized consultations for every appointment</li>
+        <li>Fast, easy online booking with flexible timing</li>
+        <li>Trusted salon experience with top customer satisfaction</li>
+      </ul>
 
+      <div class="about-actions">
+        <a href="/services/" class="btn">Explore Services</a>
+        <a href="/booking/" class="btn btn-outline">Book Now</a>
+      </div>
     </div>
-
   </section>
 
   <!-- CONTACT -->
@@ -285,57 +300,5 @@
 
 </section>
 
-<!-- FOOTER SECTION -->
-
-<footer class="footer">
-
-    <div class="footer-container">
-
-        <div class="footer-box">
-            <h2>Praveen Hair Salon</h2>
-            <p>
-                Praveen Hair Salon provides professional hair cutting, beard styling,
-                hair spa, facial, grooming, and modern salon services with comfort,
-                hygiene, and customer satisfaction.
-            </p>
-        </div>
-
-        <div class="footer-box">
-            <h3>Our Services</h3>
-
-            <ul>
-                <li>Hair Cutting</li>
-                <li>Beard Styling</li>
-                <li>Hair Spa</li>
-                <li>Facial & Cleanup</li>
-                <li>Hair Coloring</li>
-                <li>Massage</li>
-            </ul>
-        </div>
-
-        <div class="footer-box">
-            <h3>Contact Info</h3>
-
-            <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
-            <p><i class="fa-solid fa-location-dot"></i> Jodhpur, Rajasthan</p>
-            <p><i class="fa-solid fa-envelope"></i> praveensalon@gmail.com</p>
-        </div>
-
-        <div class="footer-box">
-            <h3>Opening Hours</h3>
-
-            <p>Monday - Sunday</p>
-            <p>9:00 AM - 10:00 PM</p>
-        </div>
-
-    </div>
-
-    <div class="footer-bottom">
-        <p>© 2026 Praveen Hair Salon | All Rights Reserved</p>
-    </div>
-
-</footer>
-
-</body>
-</html>
+{% endblock %}
         

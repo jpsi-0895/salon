@@ -10,20 +10,21 @@ db.sqlite3
 db.sqlite3-journal
 media/
 staticfiles/
+*.sqlite3
 
 # Environment
 .env
+.env.*
 .venv/
 venv/
 ENV/
 env/
 .python-version
 
-# PyCharm
-.idea/
-
-# VS Code
+# IDEs
 .vscode/
+.idea/
+.history/
 
 # macOS
 .DS_Store
@@ -71,31 +72,12 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 
-# Django stuff:
-*.sqlite3
-*.log
-
 # Sphinx documentation
 docs/_build/
-
-# Pyenv
-.python-version
 
 # mypy
 .mypy_cache/
 .dmypy.json
-.dmypy.json
 
 # Jupyter Notebook
 .ipynb_checkpoints
-
-# IDEs
-.vscode/
-.idea/
-
-# Local env
-.env
-.env.*
-
-# VS Code workspace history
-.history/
