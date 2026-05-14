@@ -1,0 +1,1351 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webpage</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/flaticon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel='stylesheet' href='https://flaticon.com'>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+
+        }
+        body{
+            font-family: 'Open Sans', sans-serif;
+        }
+        header{
+            background-color: white;
+            padding: 0;
+            margin: 0;
+            color: #777777;
+        }
+        .header1{
+            padding: 15px 15px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            background-color: #f2f2f2;       
+            color: #808080;     
+            font-size: 15px;
+            font-weight: 400;            
+        }
+        .fa-clock{
+            color: #f7c02d;
+        }
+        .fa-facebook-f, .fa-pinterest-p, .fa-rss, .fa-linkedin-in, .fa-twitter{
+            margin-right: 3px;
+            font-size:14px ;
+
+        } 
+        .fa-facebook-f:hover, .fa-pinterest-p:hover, .fa-rss:hover, .fa-linkedin-in:hover, .fa-twitter:hover{
+            color: #f7c02d;
+        } 
+
+        .button1 {
+            padding: 4px;
+            color: #848484;
+            font-size: 15px;
+            border: 1px solid #dedede;
+            margin-right: 100px;
+            font-weight: 400;            
+        }   
+        .header2{
+            background-color: white;
+        } 
+        .img-logo{
+            left: 60px;
+            top: -8px;
+            padding: 94px 18px 52px 18px;
+            margin-left: 104px;
+            position: relative;
+            background-color: white;
+        }
+        .header-top{
+
+            background-image: url("https://st.ourhtmldemo.com/new/Machinery/images/background/2.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size:cover ;
+            color: white;
+            background-color: transparent;
+        }
+        .auto-container{
+            max-width: 1200px;
+            padding: 0 0;
+            margin: 0 auto;
+        }
+        .header-top-inner{
+            padding: 36px 10px 16px 10px;
+            background-color: black;
+            border-bottom: 1px solid #777777 ;
+            
+        }
+        .header-top-inner ul li a{
+            gap: 10px;
+            color: white;
+            font-size: 17px;
+            font-weight: 600;            
+        }
+        .header-top-inner ul li a:hover{
+            color: #f7c02d;
+            
+        }
+        .header-top-inner ul li span a{
+            padding: 13px 25px;
+            color: black;
+            background-color: #f7c02d;
+            border-radius: 2px;
+        }
+        .header-top-inner ul li a:hover{
+            color: #f7c02d;
+            background-color:#303030;
+        }
+
+        .home:hover{
+            color: #f7c02d;
+            
+        }
+        section{
+            padding: 0;
+            margin: 0;
+            background-color: white;
+        }        
+        .img-container{
+            background-image: url("{% static 'images/image61.png' %}");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 515px;
+            position: relative;
+            z-index: 10;
+            display: flex;
+            justify-content: right;
+            align-items: end;
+            text-align: right;
+        }
+        .img-container-text{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: left;
+            background-color: white;
+            color: black;
+            position: absolute;
+            max-width: 400px;
+            height: 365px;
+            z-index: 20;
+            margin:40px;
+            padding:0 30px;
+            font-family: 'Open Sans', sans-serif;
+        }
+        .logo2{
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            text-align: left;
+            position: relative;
+            padding: 0 0 20px 0;
+            margin: 0px 347px 30px 0;
+
+        }
+        .logo2::after{
+            position: absolute;
+            content: '';
+            width: 130px;
+            height: 1px;
+            background-color: #f2f2f2;
+            left: 0;
+            bottom: 0;
+        }
+
+        .text p{
+            color: #848484;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+
+        }
+
+        .text h3{
+            margin-bottom: 20px;
+            font-weight: 400;
+            color: #222222;
+            font-size: 20px;
+        
+        }
+        .fa-house{
+            color: #f7c02d;
+            font-size: 60px;
+            line-height: 60px;
+        }
+        .story-container{
+            padding: 0;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-direction: row;
+        }
+        .story{
+            margin: 40px 0 0 ;
+        }
+        .story h2{
+            margin-bottom: 30px;
+            font-weight: 600;
+            font-size: 36px;
+            color: #303030;
+        }
+        .story h3{
+            margin-bottom: 27px;
+            font-size: 26px;
+            font-weight: 400;
+            color: #303030;
+            line-height: 30px;
+        
+        }
+        .story p{
+            font-size: 16px;
+            line-height: 25px;
+            color: #848484;
+        }
+        .detail {
+            font-size: 20px;
+        }
+        .detail h4{
+            font-size: 21px;
+            font-weight: 400;
+            color: #303030;
+            line-height: 31px;
+        }
+        .detail span{
+            font-size: 17px;
+            color: #f7c02d;
+            font-weight: 400;
+        }
+        .container-detail{
+            display: flex;
+            flex-direction: row;
+            margin: 80px 0;
+        }
+        .date{
+            padding: 0 16px;
+            position: relative;
+        }
+        /* .date::after{
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 1px;
+            background-color: black;
+            content: "";
+        } */
+        .date p{
+            position: relative;
+            color: #848484;
+            display: inline-block;
+        }
+        .date p::after{ 
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+            content: '';
+            width: 71%;
+            height: 1px;
+            background-color: #848484;
+        }
+
+        .img-box{
+            width: 260px ;
+            height: auto;
+            margin: 0 25px;
+        }
+        .text2{
+            padding: 10px 10px;
+        }
+        .text2 h3 a{
+            color: #303030;
+            font-size: 20px;
+        }
+        .text2 h3 a:hover{
+            color: #f7c02d;
+        }
+        .text2 p{ 
+            color:#848484;
+            line-height: 25px;
+            font-size: 17px;
+            margin: 0 85px 0 0;
+            
+        }
+        .auto-container{
+            max-width: 1200px;
+            padding: 0 0;
+            margin: 0 auto;
+        }
+        .box1{
+            padding: 0 5px;
+
+        }
+        .machinery-container{
+            font-family: 'Roboto', sans-serif;   
+            margin: 20px 0;
+        }
+        .heading{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 400;
+            margin: 64px 0;
+        }
+        .img-container2{
+            margin-bottom: 20px;
+        }
+        .logo3{
+            max-width: 60px;
+            margin-bottom: 20px;
+            width: 350px;
+            height: auto;
+        }
+        .link-box {
+            position: relative;
+        }
+        .link-box a{
+            font-size: 16px;
+            transition: all 300ms ease;
+            color: #f7c02d; 
+            font-weight: 400; 
+            margin-bottom: 20px;
+            display: inline-block;
+            padding-left: 0px;
+            /* transform: translateX(-20px); */
+        }
+        .link-box a:hover {
+            color: #333333;
+            padding-left: 30px;
+        }
+        .link-box a:hover i{
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 18px;
+            opacity: 1;
+            visibility: visible;
+            margin-right: 20px;
+        }
+        .link-box a i{
+            opacity: 0;
+            visibility: hidden;
+        }
+        .fa-hand-point-right{
+            color: black;
+        }
+        .button3 a{
+            cursor: pointer;
+
+        }
+        .button3 a:hover{
+            color: green;
+        }
+        .our-team-heading{
+            font-size: 24px;
+             font-weight: 600;
+
+        }
+        .our-team{
+            margin: 0px 10px;
+
+        }
+        .Morgan{
+            position: relative;
+            margin: 20px 0;
+            padding: 0 0 15px 0;
+            font-size: 21px;
+            display: inline-block;
+        }
+        .Morgan::after{
+            position: absolute;
+            content: "";
+            bottom: 0;
+            left: 0;
+            background-color: #f2f2f2;
+            width: 67%;
+            height: 1px;
+            transition: .4s ease;
+        }
+        .Morgan:hover::after{
+            width: 32%;
+            background-color: #f7c02d;
+        }
+        /* .email-box{
+            
+
+        } */
+        .email-box span:hover{
+            background-color: #f7c02d;
+        }
+        .logo4{
+            margin-bottom: 20px;
+
+        }
+        .machinery-text{
+            color: white;
+            font-size: 20px;
+
+        }
+        .fa-envelope{
+            font-size: 30px;
+            border: 1px solid #f2f2f2;
+            padding: 10px;
+        }
+        .subscribe-form{
+
+        }
+        .input-box{ 
+            font-size: 15px;
+            background-color: black;
+            color: #4C4C4C;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid #777777;
+            width: 100%;
+
+        }
+        .Subscribe-Us{
+            position: relative;
+
+        }
+        .Subscribe-Us a{
+            position: relative;
+            font-size: 18px;
+            font-weight: 400;
+            color: #ffffff;
+            padding-left: 30px;
+            transition: all 200ms ease-in;
+            display: inline-block;
+        }
+        .Subscribe-Us a:hover{
+            color: #f7c02d;
+            padding-left: 0;
+        }
+        .Subscribe-Us a:hover i{
+            opacity: 0;
+            visibility: hidden;
+        }
+        .Subscribe-Us a i{
+            opacity: 1;
+            visibility: visible;
+        }
+        .Usefull-Links{
+            padding: 0px 0 20px 0;
+            color: white;
+            font-size: 15px;
+            font-weight: 400;
+        }
+        .Usefull-Links h2{
+            padding-top: 10px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .Usefull-Links h2::before{
+            position: absolute;
+            content: "";
+            width: 43%;
+            height: 1.5px;
+            top: 0;
+            left: 0;
+            background-color: #f7c02d;
+
+
+        }
+        /* .Usefull-Links-lists {
+
+        } */
+        .lists li a{
+            color: #848484;
+            font-size: 16px;          
+            font-weight: 400;
+            display: inline-block;
+            width: 200px;
+            padding-bottom: 16px;
+            transition: all 300ms ease-in; 
+        }
+        .lists li a:hover {
+            color: #f7c02d;
+            padding-left: 20px;
+        }
+        .lists li a i{
+            color: #848484;
+            display: inline-block; 
+            transition: all 300ms ease-in;           
+        }
+
+        .lists li a:hover i{
+            color: #f7c02d;
+            transform: rotate(270deg);            
+        }
+        .footer-text li a{
+            color: white;
+
+        }
+        .machinery-icon-human-rights{
+            font-size: 20px;
+        }
+        .fa-brands{
+            color: white;
+            font-size: 13px;
+            padding-right: 5px;
+        }
+        .fa-solid{
+            color: white;
+            font-size: 13px;
+            padding-right: 5px;            
+        }
+        .h-line {
+            position: relative;
+        }
+        .h-line::after{
+            position: absolute;
+            content: "";
+            top: 0;
+            right: 0;
+            width: 1px;
+            height: 100%;
+            background-color: #E3E3E3;
+
+        }
+        .inner-header{
+
+        }
+        .inner-header ul li a{
+            position: relative;
+            font-size: 14px;
+            font-family: "Roboto", sans-serif;
+            text-transform: uppercase;
+            font-weight: 500;
+            padding: 0px 0 20px 0;
+        }
+        .inner-header ul li:hover a::after{
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 2px;
+            left: 0;
+            bottom: 0;
+            background-color: #F7C02D;
+        }
+        .home{
+            position: relative;
+        }
+        .home::after{
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 2px;
+            left: 0;
+            bottom: 0;
+            background-color: #F7C02D;
+        }
+        .inner-header :hover{
+            color: #F7C02D;
+        }
+        .slide a i{
+            color: #F7C02D;
+        }
+        .slide a:hover{
+            color: white;
+        }
+        .slide i:hover{
+            color: white;
+        }
+        
+    
+
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+    <header >
+        <div class="header1" >
+            <div>
+            </div>
+            <div style="margin-left: 322px;">
+                <span ><i class="fa-regular fa-clock"></i></i></span>
+                <span style="border-right: 1px solid black;  padding: 0 10px;"> Mon - Fri: 09:00 - 18:00</span>
+                <span style=" padding-left: 10px;"> Stay Connected : </span>
+                <span style=" padding-left: 10px;"><i class="fa-brands fa-facebook-f"></i></span>
+                <span style=" padding-left: 10px;"><i class="fa-brands fa-twitter"></i></span>
+                <span style=" padding-left: 10px;"><i class="fa-brands fa-linkedin-in"></i></span>
+                <span style=" padding-left: 10px;"><i class="fa-brands fa-pinterest-p"></i></span>
+                <span style=" padding-left: 10px;"><i class="fa-solid fa-rss"></i></span>
+            </div>
+            <div>
+                <button class="button1">  
+                    <a href="#" style="text-decoration: none; color: #848484;">
+                        Buy Now
+                    </a>
+                </button>
+                <span style=" padding-right: 5px; color: #f7c02d;"><i class="fa fa-globe"></i></span>
+                <span style="margin-right: 190px; font-weight: 400;">California</span>
+            </div>
+        </div>
+        <div class="header2">
+            <div>
+                <span class="img-logo">
+                    <a href="#">
+                        <img src="{% static 'images/image60.png' %}" alt="">
+                    </a>
+                </span>
+            </div>
+            <div style="position: relative; top: -24px; display: flex; flex-direction: row; justify-content: space-around; text-align: center; align-items: center; margin-left: 700px; margin-right:88px ; font-weight: 400;">
+                <div style=" border-right: 1px solid #f2f2f2;  ">
+                    <span><i class="fi fi-rr-user"></i></span>
+                    <span style="margin-bottom: 10px;  margin-right: 10px;">
+                        <p style="margin-bottom: 7px;">13, Big Smart Str, 2nd Cross</p>
+                        <p style="color: #848484; font-weight: 600;  ">Newyork, USA 1002.</p>
+                    </span>
+                </div>
+                <div>
+                    <span><i class="fi fi-rr-user"></i></span>
+                    <span>
+                        <p style="margin-bottom: 7px;">1-800-784-533 & 544</p>
+                        <p style="color: #848484; font-weight: 600;" >Machinery@Support.com</p>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="header-top">
+            <div class="auto-container">
+                <div class="header-top-inner">
+                    <ul style="list-style: none; display: flex;  flex-direction: row; justify-content: space-between; text-align: center; align-items: center;  " >
+                        <li><a href="#" style="text-decoration: none;">Home</a></li>
+                        <li><a href="#"style="text-decoration: none;">About Us</a></li>
+                        <li><a href="#"style="text-decoration: none;">Market sectors</a></li>
+                        <li><a href="#"style="text-decoration: none;">Projects</a></li>
+                        <li><a href="#"style="text-decoration: none;">News</a></li>
+                        <li><a href="#"style="text-decoration: none;">Shop</a></li>
+                        <li><a href="#"style="text-decoration: none;">contacts Us</a></li>
+                        <li><i class="fa-solid fa-magnifying-glass"></i></li>
+                        <li><span><a href="#"style="text-decoration: none; ">Get A Quete</a></span></li>
+                    </ul>
+                </div>
+                <div style=" display: flex; justify-content: center; text-align: center; align-items: center; margin: 130px 0;" >
+                    <h1 style="font-size: 48px;">About Us</h1>
+                </div>
+                <div style="padding-bottom: 20px;">
+                    <span class="home">Home > </span>
+                    <span style="color: #f7c02d;">About Us</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div style="padding: 30px 10px;" >
+            <div class="auto-container">
+                <div class="img-container">
+                    <div class="img-container-text">
+                        <div class="logo2">
+                            <i class="fa-solid fa-house"></i>
+                        </div>
+                        <div class="text">
+                            <h3>
+                                Smart Technology
+                            </h3>
+                            <p>
+                                Explain to you how this mistaken denouncing pleasure and praising pain was born & will give complete account of the system.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="story-container">
+                    <div style="flex: 1;">
+                        <div class="story">
+                            <h2>
+                                Story About Machinery
+                            </h2>
+                            <h3>
+                                We are leading manufacturing company in european countries.
+                            </h3>
+                            <p >
+                                Built enviable reputation in consumer goods, heavy industry, high tech, manufacturing, medical, vehicle our works sectors multi disciplinary team of engineering & experts, who pursues desires obtains pains itself there anyone loves or pursues desires obtain except to obtain some advantages from it? But who has any right to find fault.
+                            </p>
+                            <p style="padding: 20px 0;">
+                                Idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.
+                            </p>
+                        </div>
+                        <div class="detail">
+                            <h4 >
+                                Thomos Nicholes
+                            </h4>
+                            <span >
+                                CEO / Founder
+                            </span>
+                        </div>
+                    </div>
+                    <div style="flex: 1; " >
+                        <div style="border-left: 1px solid #808080 ;">
+                            <div class="container-detail " >
+                                <span class="date">
+                                    <p style="display: flex; width: 100px;">Nov 1984</p>
+                                </span>
+                                <div class="img-box">
+                                    <img src="{% static 'images/image63.png' %}" alt="" style="width: 100%;">
+                                </div>
+                                <div class="text2" style="display: flex; flex-direction: column;">
+                                    <h3 style="margin-bottom: 25px;">
+                                        <a href="#"style="text-decoration: none;  ">Started at Newyork City</a>
+                                    </h3>
+                                    <p>The great explorer of the truth, the master-builder of human happiness one rejects dislikes, or avoids pleasure itself.</p>
+                                </div>
+                            </div>
+                            <div class="container-detail ">
+                                <span class="date">
+                                    <p style="display: flex; width: 100px;">Nov 1984</p>
+                                </span>
+                                <div class="img-box">
+                                    <img src="{% static 'images/image62.png' %}" alt="" style="width: 100%;">
+                                </div>
+                                <div class="text2" style="display: flex; flex-direction: column;">
+                                    <h3 style="margin-bottom: 25px;">
+                                        <a href="#"style="text-decoration: none;  ">8 New Branches Opened</a>
+                                    </h3>
+                                    <p>The great explorer of the truth, the master-builder of human happiness one rejects dislikes, or avoids pleasure itself.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+            </div>
+        </div>
+    </section>
+    <!-- industry section -->
+    <section >
+        <div class="auto-container">
+            <div class="machinery-container">
+                <div class="heading">
+                    <h2>
+                        Machinery Specials
+                    </h2>
+                </div>
+                
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: row;">
+            <div style="display: flex; flex-direction: column; margin: 20px 0; width: 380.25px;
+                    height: auto; background-color: #f6f6f6;">
+                    <span class="img-container2">
+                        <img src="{% static 'images/image1.png' %}" alt="" style="width: 100%; ">
+                    </span>                 
+                    <div style="padding: 20px 30px;">
+                        <span class="logo3">
+                        <a href="#" style="text-decoration: none;">
+                            <img src ="{% static 'images/image2.png' %}" alt="" style="width: 17%; ">
+                        </a>
+                        </span>
+                        <h3 style="margin: 20px 0;">
+                            <a href="#" style="text-decoration: none; color: #303030;">
+                                Honest & Depandable
+                            </a>
+                        </h3>
+                        <p style="margin-bottom: 20px; color: #848484; line-height: 25px; " >
+                            Any right to find fault with a man ut who chooses to enjoy a pleasure.
+                        </p>
+                        <div class="link-box">
+                            <a href="#" style="text-decoration: none; ">
+                                <i class="fa fa-light fa-hand-point-right"></i>
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div style="display: flex; flex-direction: column; margin: 20px 0px; width: 380.25px;
+                    height: auto; background-color: #ffffff;">
+                    <span class="img-container2">
+                        <img src="{% static 'images/image1.png' %}" alt="" style="width: 100%; ">
+                    </span>                 
+                    <div style="padding: 20px 30px;">
+                        <span class="logo3">
+                        <a href="#" style="text-decoration: none;">
+                            <img src ="{% static 'images/image2.png' %}" alt="" style="width: 17%; ">
+                        </a>
+                        </span>
+                        <h3 style="margin: 20px 0;">
+                            <a href="#" style="text-decoration: none; color: #303030;">
+                                Honest & Depandable
+                            </a>
+                        </h3>
+                        <p style="margin-bottom: 20px; color: #848484; line-height: 25px; " >
+                            Any right to find fault with a man ut who chooses to enjoy a pleasure.
+                        </p>
+                        <div class="link-box ">
+                            <a href="#" style="text-decoration: none;">
+                                <i class="fa fa-light fa-hand-point-right"></i>
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div style="display: flex; flex-direction: column; margin: 20px 0px; width: 380.25px;
+                    height: auto; background-color: #f6f6f6;">
+                    <span class="img-container2">
+                        <img src="{% static 'images/image1.png' %}" alt="" style="width: 100%; ">
+                    </span>                 
+                    <div style="padding: 20px 30px;">
+                        <span class="logo3">
+                        <a href="#" style="text-decoration: none;">
+                            <img src ="{% static 'images/image2.png' %}" alt="" style="width: 17%; ">
+                        </a>
+                        </span>
+                        <h3 style="margin: 20px 0;">
+                            <a href="#" style="text-decoration: none; color: #303030;">
+                                Honest & Depandable
+                            </a>
+                        </h3>
+                        <p style="margin-bottom: 20px; color: #848484; line-height: 25px; " >
+                            Any right to find fault with a man ut who chooses to enjoy a pleasure.
+                        </p>
+                        <div class="link-box ">
+                            <a href="#" style="text-decoration: none; ">
+                                <i class="fa fa-light fa-hand-point-right"></i>
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div style="display: flex; flex-direction: column; margin: 20px 0px; width: 380.25px;
+                    height: auto; background-color: #ffffff;">
+                    <span class="img-container2">
+                        <img src="{% static 'images/image1.png' %}" alt="" style="width: 100%; ">
+                    </span>                 
+                    <div style="padding: 20px 30px;">
+                        <span class="logo3">
+                        <a href="#" style="text-decoration: none;">
+                            <img src ="{% static 'images/image2.png' %}" alt="" style="width: 17%; ">
+                        </a>
+                        </span>
+                        <h3 style="margin: 20px 0;">
+                            <a href="#" style="text-decoration: none; color: #303030;">
+                                Honest & Depandable
+                            </a>
+                        </h3>
+                        <p style="margin-bottom: 20px; color: #848484; line-height: 25px; " >
+                            Any right to find fault with a man ut who chooses to enjoy a pleasure.
+                        </p>
+                        <div class="link-box ">
+                            <a href="#" style="text-decoration: none;">
+                                <i class="fa fa-light fa-hand-point-right"></i>
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div style="background-color: black; padding: 0;
+            margin: 0; ">
+            <div style="padding: 40px 10px;display: flex; flex-direction: row; align-items: center
+            ; justify-content: space-around; text-align: center; " >
+                <div style="color: #f7c02d; font-size: 20px; padding: 0 0 0 40px;">
+                    <p>Innovative products and service for construction projects and Automative service.</p>
+                </div>
+                <div class="button3"  style="color: black;
+                    background-color: #f7c02d;
+                    font-size: 16px;
+                    padding: 18px 22px;
+                    font-weight: 600;
+                    border-radius: 3px; ">
+                    <span >
+                        <a href="#" style="text-decoration: none;color: black; ">Our Latest Projects</a>
+                    </span>
+                </div>
+                
+            </div>
+
+        </div>
+        <div  style="background-color: white; padding: 0;
+            margin: 0; ">
+            <div class="auto-container">
+                <div class="our-team-heading" style="padding: 40px 0px;display: flex; flex-direction: row; align-items: center
+                    ; justify-content: space-around; text-align: center; "  >
+                    <h2>
+                        Meet Our Team
+                    </h2>
+                </div>
+                <div class="our-team" style="display: flex; flex-direction:row; margin: 0 0 25px 0
+                ">
+                    <div class="img-box2" style="display: flex; flex-direction:column; margin: 0 15px;">
+                        <img src="{% static 'images/image1.png' %}" alt="">
+                        <div style="display: flex; flex-direction: row;">
+                            <div style="display: flex; flex-direction: column;">
+                                <span class="Morgan" style="margin: 17px 0; font-size: 21px;">
+                                    Morgan Campbell
+                                </span>
+                                <span style="color: #848484;margin: 0 0 22px 0; font-size: 17px;">
+                                    Founder
+                                </span>
+                            </div>
+                            <div class="email-box" style=" display: flex;text-align: center;
+                                justify-content: center; align-items: center; 
+                                margin: 20px 0px 16px 140px;
+                                ">
+                                <span>
+                                    <a href="#" style="text-decoration: none;">
+                                        <i class="fa fa-thin fa-envelope"></i>      
+                                        </i>
+                                    </a>
+                                </span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img-box2" style="display: flex; flex-direction:column; margin: 0 10px;">
+                        <img src="{% static 'images/image1.png' %}" alt="">
+                        <div style="display: flex; flex-direction: row;">
+                            <div style="display: flex; flex-direction: column;">
+                                <span class="Morgan" style="margin: 17px 0; font-size: 21px;">
+                                    Morgan Campbell
+                                </span>
+                                <span style="color: #848484;margin: 0 0 22px 0; font-size: 17px;">
+                                    Founder
+                                </span>
+                            </div>
+                            <div class="email-box" style=" display: flex;text-align: center;
+                                justify-content: center; align-items: center; 
+                                margin: 20px 0px 16px 140px;
+                                ">
+                                <span>
+                                    <a href="#" style="text-decoration: none;">
+                                        <i class="fa fa-thin fa-envelope"></i>      
+                                        </i>
+                                    </a>
+                                </span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img-box2" style="display: flex; flex-direction:column; margin: 0 10px;">
+                        <img src="{% static 'images/image1.png' %}" alt="">
+                        <div style="display: flex; flex-direction: row;">
+                            <div style="display: flex; flex-direction: column;">
+                                <span class="Morgan" style="margin: 17px 0; font-size: 21px;">
+                                    Morgan Campbell
+                                </span>
+                                <span style="color: #848484;margin: 0 0 22px 0; font-size: 17px;">
+                                    Founder
+                                </span>
+                            </div>
+                            <div class="email-box" style=" display: flex;text-align: center;
+                                justify-content: center; align-items: center; 
+                                margin: 20px 0px 16px 140px;
+                                ">
+                                <span>
+                                    <a href="#" style="text-decoration: none;">
+                                        <i class="fa fa-thin fa-envelope"></i>      
+                                        </i>
+                                    </a>
+                                </span>
+
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                </div>
+                 <div class="our-team" style="display: flex; flex-direction:row;    margin: 0 0 25px 0
+                ">
+                    <div class="img-box2" style="display: flex; flex-direction:column; margin: 0 15px;">
+                        <img src="{% static 'images/image1.png' %}" alt="">
+                        <div style="display: flex; flex-direction: row;">
+                            <div style="display: flex; flex-direction: column;">
+                                <span class="Morgan" style="margin: 17px 0; font-size: 21px;">
+                                    Morgan Campbell
+                                </span>
+                                <span style="color: #848484;margin: 0 0 22px 0; font-size: 17px;">
+                                    Founder
+                                </span>
+                            </div>
+                            <div class="email-box" style=" display: flex;text-align: center;
+                                justify-content: center; align-items: center; 
+                                margin: 20px 0px 16px 140px;
+                                ">
+                                <span>
+                                    <a href="#" style="text-decoration: none;">
+                                        <i class="fa fa-thin fa-envelope"></i>      
+                                        </i>
+                                    </a>
+                                </span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img-box2" style="display: flex; flex-direction:column; margin: 0 10px;">
+                        <img src="{% static 'images/image1.png' %}" alt="">
+                        <div style="display: flex; flex-direction: row;">
+                            <div style="display: flex; flex-direction: column;">
+                                <span class="Morgan" style="margin: 17px 0; font-size: 21px;">
+                                    Morgan Campbell
+                                </span>
+                                <span style="color: #848484;margin: 0 0 22px 0; font-size: 17px;">
+                                    Founder
+                                </span>
+                            </div>
+                            <div class="email-box" style=" display: flex;text-align: center;
+                                justify-content: center; align-items: center; 
+                                margin: 20px 0px 16px 140px;
+                                ">
+                                <span>
+                                    <a href="#" style="text-decoration: none;">
+                                        <i class="fa fa-thin fa-envelope"></i>      
+                                        </i>
+                                    </a>
+                                </span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img-box2" style="display: flex; flex-direction:column; margin: 0 10px;">
+                        <img src="{% static 'images/image1.png' %}" alt="">
+                        <div style="display: flex; flex-direction: row;">
+                            <div style="display: flex; flex-direction: column;">
+                                <span class="Morgan" style="margin: 17px 0; font-size: 21px;">
+                                    Morgan Campbell
+                                </span>
+                                <span style="color: #848484;margin: 0 0 22px 0; font-size: 17px;">
+                                    Founder
+                                </span>
+                            </div>
+                            <div class="email-box" style=" display: flex;text-align: center;
+                                justify-content: center; align-items: center; 
+                                margin: 20px 0px 16px 140px;
+                                ">
+                                <span>
+                                    <a href="#" style="text-decoration: none;">
+                                        <i class="fa fa-thin fa-envelope"></i>      
+                                        </i>
+                                    </a>
+                                </span>
+
+                            </div>
+                        </div>
+                    </div>
+        </div>
+    </section>
+    <footer  style="padding: 0; margin: 0; background-color: black; border-bottom: 50px solid white;">
+        <div class="auto-container" >
+            <div style="display: flex; flex-direction: row; align-items: center; text-align: left; justify-content: left; padding: 90px 10px;"   >
+                <div class="box1" style="flex: 1; padding: 0 20px 0 0;" >
+                    <span class="logo4" style="background-color: black;">
+                        <img src="/static/images/image60.png" alt="">
+                    </span>
+                    <div class="machinery-text">
+                        <h4 style="margin: 20px 0; font-size: 16px; font-weight: 600;">
+                            Let’s join & create something together
+                        </h4>
+                        <p style="margin-bottom: 20px 0; font-size: 15px; color: #848484; line-height: 22px;">
+                            Must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and will give you completed.
+                        </p>
+                        <form class="subcriber-form">
+                            <input type="text" name="email" placeholder="Enter your email address........" class="input-box">
+                        <span class="Subscribe-Us">
+                            <a href="#" style="text-decoration: none;">
+                                <i class="fa-solid fa-arrow-right"></i>
+                                Subscribe Us
+                            </a>
+                        </span>
+                        </form>
+                    </div>
+                </div>
+                <div class="box1" style="flex: 1;padding: 0 20px 0 0;">
+                    <div class="Usefull-Links">
+                        <h2>Usefull Links</h2>
+                    </div>
+                    <div class="Usefull-Links-lists" style="display: flex; justify-content: space-around; text-align: left; align-items: center;" >
+                        <ul class="lists" style="list-style: none; " >
+                            <li><a href="#" style="text-decoration: none;">
+                                <i class="fa-solid fa-arrow-down" style="padding-right: 9px;"></i>About Company
+                            </a></li>
+                            <li><a href="#" style="text-decoration: none;">
+                                <i class="fa-solid fa-arrow-down" style=" padding-right: 9px;"></i>Our Services
+                            </a></li>
+                            <li><a href="#" style="text-decoration: none;"><i class="fa-solid fa-arrow-down" style="padding-right: 9px;"></i>Latest Projects</a></li>
+                            <li><a href="#" style="text-decoration: none;"><i class="fa-solid fa-arrow-down" style=" padding-right: 9px;"></i>Testimonials</a></li>
+                            <li><a href="#" style="text-decoration: none;"><i class="fa-solid fa-arrow-down" style=" padding-right: 9px;"></i>Why Choose Us</a></li>
+                            <li><a href="#" style="text-decoration: none;"><i class="fa-solid fa-arrow-down" style="padding-right: 9px;"></i>Shop Products</a></li>
+                        </ul>
+                        <ul class="lists" style="list-style: none; ">
+                            <li><a href="#" style="text-decoration: none;"><i class="fa-solid fa-arrow-down" style=" padding-right: 9px;"></i>Get a Quote</a></li>
+                            <li><a href="#" style="text-decoration: none;"><i class="fa-solid fa-arrow-down" style=" padding-right: 9px;"></i>Site Map</a></li>
+                            <li><a href="#" style="text-decoration: none;"><i class="fa-solid fa-arrow-down" style=" padding-right: 9px;"></i>Latest From Blog</a></li>
+                            <li><a href="#" style="text-decoration: none;"><i class="fa-solid fa-arrow-down" style=" padding-right: 9px;"></i>FAQ’s</a></li>
+                            <li><a href="#" style="text-decoration: none;"><i class="fa-solid fa-arrow-down" style=" padding-right: 9px;"></i>Contact Us</a></li>
+                            <li><a href="#" style="text-decoration: none;"><i class="fa-solid fa-arrow-down" style=" padding-right: 9px;"></i>Private Policy</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="box1" style="flex: 1; background-color: #232323;" >
+                    <div style="display: flex;  flex-direction: column; justify-content: left; text-align: left; align-items: left;">
+                        <div>
+                            <div style="display: flex; flex-direction: row; margin: 10px 15px 10px 25px;border-bottom: 2px solid #313131">
+                                <div style="display: flex; justify-content: space-around; text-align: left; align-items: center; margin: 0 23px 60px 0;">
+                                    <i class="fa fa-sharp fa-solid fa-phone" style="color: #f7c02d;font-size: 30px;"></i>
+                                </div>
+                                <div  style="color: white;  font-weight: 400; ">
+                                    <h3 style="font-size: 16px; padding-bottom: 20px;">
+                                        For Business Dealing:
+                                    </h3>
+                                    <span style="font-size: 21px; padding-bottom: 20px;  font-weight: 400;">
+                                        888-000-1234
+                                    </span>
+                                    <p style="color: #999999; font-size: 18px; padding: 10px 0; font-weight: 400; ">
+                                        Available 9:00 - 7:00 all days.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="display: flex;  flex-direction: column; justify-content: left; text-align: left; align-items: left;">
+                        <div>
+                            <div style="display: flex; flex-direction: row; margin: 10px 15px 10px 25px; border-bottom: 2px solid #313131">
+                                <div style="display: flex; justify-content: space-around; text-align: left; align-items: center;margin: 0 23px 5px 0;">
+                                    <i class="fa fa-light fa-map-location-dot" style="color: #f7c02d;font-size: 30px;"></i>
+                                </div>
+                                <div  style="color: white;  ">
+                                    <p style="color: #999999; font-size: 17px; padding: 0px 0 20px 0; ">
+                                        Big Smart Stareet, 2nd Cross
+                                        <br>
+                                         Newyork, USA 1002.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="display: flex;  flex-direction: column; justify-content: left; text-align: left; align-items: left;">
+                        <div>
+                            <div style="display: flex; flex-direction: row; margin: 8px 15px 5px 25px;">
+                                <div style="display: flex; justify-content: space-around; text-align: left; align-items: center; margin: 0 23px 5px 0;">
+                                    <i class="fa-solid fa-paper-plane" style="color:#f7c02d; font-size:30px;"></i>                                
+                                </div>
+                                <div  style="color: white;  ">
+                                    <h3 style="font-size: 16px; padding-bottom: 8px;">
+                                        Mail Us at
+                                    </h3>
+                                    <p style="color: #999999; font-size: 17px; padding: 0px 0 20px 0; ">
+                                        Machinery@support.com
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div>
+                </div>
+            </div>
+            <div style="color: white; padding: 20px 0; ">
+                <div class="footer-text" >
+                    <ul style="list-style: none;display: flex; flex-direction: row; justify-content: space-between; text-align: left; align-items: center;">
+                        <li><a href="#" style="text-decoration: none;">
+                            Quote From Our Expert</a></li>
+                        <li>© 2019 All Rights Reserved by
+                            <a href="#" class="" style="text-decoration: none; " >
+                            Machinery
+                        </a>
+                        </li>
+                        <li>
+                            Privacy Terms of Use Site Map
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- home two ------------------------------------------------------------->
+     <header style="background-color: black; color: white; padding: 0;
+        margin: 0;" >
+        <div class="auto-container">
+            <div >
+                <ul style="display: flex; list-style: none; text-align: center; justify-content: space-between; align-items: center;">
+                    <li>
+                        <div style="background-color: #F7C02D; padding: 15px 20px; color: black; font-weight: 600; font-size: 17px;">
+                            <span>
+                                Newyork
+                            </span>
+                            <i class="fa fa-utility fa-semibold fa-angle-down" style="padding-left: 30px;"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <i class=" fa fa-utility-fill fa-semibold fa-location-dot" style="padding-right: 7px; color: #F7C02D;;  "></i>
+                            <span>
+                                327 Nw 24th street rd 10475
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <span > 
+                                Follow Us:
+                                <a href="#" style="text-decoration: none;">
+                                    <i class="fa-brands fa-facebook-f" style="padding-left: 7px;"></i>
+                                </a>
+                                <a href="#" style="text-decoration: none;">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                                <a href="#" style="text-decoration: none;">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </a>
+                                <a href="#" style="text-decoration: none;">
+                                    <i class="fa-brands fa-twittre"></i>
+                                </a>
+                                <a href="#" style="text-decoration: none;">
+                                    <i class="fa-brands fa-pinterest"></i>
+                                </a>
+                                <a href="#" style="text-decoration: none;">
+                                    <i class="fa-solid fa-rss"></i>
+                                </a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="{% static 'images/image67.png' %}" alt="">
+                            <span>English</span>
+                            <i class="fa fa-utility fa-semibold fa-angle-down" style="padding-left: 7px;"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div style="background-color: white; ">
+            <div class="auto-container" style="font-family: 'Open Sans', sans-serif;">
+                <div style="padding: 25px 0; display: flex; list-style: none; text-align: center; flex-direction: row; justify-content: space-between; align-items: center;">
+                    <div style="padding: 25px 0; display: flex; list-style: none; text-align: center; flex-direction: row; justify-content: space-between; align-items: center;">
+                        <img src="{% static 'images/image60.png' %}" alt="" style="color: black;">
+                    </div>
+                <div style="color: #848484; font-size: 14px; font-weight: 400; font-family: 'Open Sans', sans-serif; display: flex">
+                       <div class="h-line" >
+                           <i class="fa fa-light fa-clock " style=" font-size: 43px; color: #F7C02D;  padding: 0px 21px;"></i>
+                       </div>
+                        <ul style="list-style: none; display: flex; flex-direction: column; padding-left: 15px;">
+                            <li style="    padding-bottom: 10px;">
+                                    <strong style="color: #303030; text-transform: uppercase;">Mon - Sat: </strong>
+                                        9am to 7pm                         
+                            </li>
+                            <li style="margin-left: -58px; ">
+                                Sunday: Closed
+                            </li>
+                        </ul>
+                </div>
+
+
+                <div style="color: #848484; font-size: 14px; font-weight: 400; font-family: 'Open Sans', sans-serif; display: flex">
+                       <div class="h-line" >
+                            <i class="fa fa-sharp fa-light fa-phone" style="font-size: 43px; color: #F7C02D;  padding: 0px 21px;"></i>                       </div>
+                        <ul style="list-style: none; display: flex; flex-direction: column; padding-left: 15px;">
+                            <li style="    padding-bottom: 10px;">
+                                    <strong style="color: #303030; text-transform: uppercase;">Office: </strong>
+                                        +31 888 56 789                        
+                            </li>
+                            <li style="    padding-bottom: 10px;">
+                                <strong style="color: #303030; text-transform: uppercase;">Factory: </strong>
+                                        555-123-4567  
+                            </li>
+                        </ul>
+                </div>
+                <div style="color: #848484; font-size: 14px; font-weight: 400; font-family: 'Open Sans', sans-serif; display: flex">
+                       <div class="h-line" >
+                            <i class="fa fa-regular fa-envelope" style="font-size: 43px; color: #F7C02D;  padding: 0px 21px; border: none;"></i>
+                        </div>
+                        <ul style="list-style: none; display: flex; flex-direction: column;padding-left: 20px;">
+                            <li style="    padding-bottom: 10px;">
+                                <strong style="color: #303030; text-transform: uppercase; margin-left: -24px;">Mail us at </strong>
+                        
+                            </li>
+                            <li>
+                                info@gmail.com
+                            </li>
+                        </ul>
+                </div>
+
+
+                </div>
+            <div style="background-color: black; padding: 0 0; color: white;">
+                <div class="inner-header">
+                    <ul style="display: flex; list-style: none; text-align: center; flex-direction: row; justify-content: space-between; align-items: center; ">
+                        <li>
+                            <a href="#" style="text-decoration: none; color: #F7C02D; margin-left: 30px; " class="home">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" style="text-decoration: none; color: white; ">
+                                About Us
+                            </a>
+                        </li>
+                                                <li>
+                            <a href="#" style="text-decoration: none; color: white; ">
+                                Market Sectors
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" style="text-decoration: none; color: white; ">
+                                Projects
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" style="text-decoration: none; color: white; ">
+                                News
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" style="text-decoration: none; color: white; ">
+                                Shop
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" style="text-decoration: none; color: white; ">
+                                Contact Us
+                            </a>
+                        </li>
+                        <li>
+                            <div class="slide">
+                                <i class="fa fa-solid fa-arrow-right" style="color: #F7C02D; font-size: 13px; padding-right: 5px;"></i>
+                                <a href="#" style="text-decoration: none; color:#F7C02D ; text-transform: none; font-size: 16px;">
+                                    Get a Quote
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <i class="fa-solid fa-cart-arrow-down" style="text-transform: none;font-size: 18px;"></i>
+                                <i class="fa  fa-solid fa-magnifying-glass" style="color: black; padding: 20px 20px; font-size: 18px;   background-color: #F7C02D;
+                                    text-transform: none;
+                                    font-size: 16px;"></i>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>  
+            </div>
+        </div>
+     </header>
+</body>
+</html>

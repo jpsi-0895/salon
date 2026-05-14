@@ -1,0 +1,2478 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            border: none;
+            outline: none;
+        }
+        div {
+            display: block;
+        }
+        .full-screen-preview{
+            height: 100%;
+            padding: 0px;
+            margin: 0px;
+        }
+        .preview__header {
+            font-size: 12px;
+            height: 54px;
+            background-color: #262626;
+            line-height: 57px;
+            margin-bottom: 1px; 
+        }
+        .preview__envato-logo{
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            text-align: left;
+        }
+
+        /* .preview__envato-logo a {
+
+            display: block;
+            top: 18px;
+            height: 18px;
+            width: 152px;
+            background-size: 152px 18px;
+            background-image: url("{% static 'images/image21.png' %}");
+            background: no-repeat;
+            background-size: contain;
+            
+            background-position: left center;
+            color:white ;
+        } */
+
+        .buy-button-container{
+            float: right;
+
+        }
+        .buy-button{
+            box-shadow: 0 2px 0 #6f9a37;
+            position: relative;
+            font-size: 16px;
+            padding: 5px 19px;
+            margin-right: 20px;
+            line-height: 1.5;
+            background-color: #82b440;
+            box-sizing: border-box;
+            display: inline-block;
+            border: none;
+            border-radius: 4px;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            text-align: center;
+            cursor: pointer;
+        }
+        .buy-button a{
+            color: white;
+            display: inline-block;
+            text-decoration: none;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+        .main-header .header-top {
+        position: relative;
+        background-color: #f2f2f2;
+        }   
+        main {
+            min-height: 100vh;
+            background-color:black ;
+            }
+        .main-header {
+                width: 100%;
+
+        }
+        .main-menu {
+            float: left;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left;
+            gap: 55px;
+            list-style: none;
+            font-family: "Roboto", sans-serif;
+            
+            font-size: 17px;
+            color: #ffffff;
+            opacity: 1;
+            line-height: 1.8em;
+            font-weight: 700;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .main-menu a{
+            color: #ffffff;
+            text-decoration: none;
+
+        }
+        .main-menu a:hover{
+            color: #f7c02d;
+
+        }
+
+        .auto-container {
+
+            max-width: 1350px;
+            padding: 0px 15px;
+            margin: 0 auto;
+        }
+        .quote-button-container{  
+            z-index: 12;
+            float: right;
+        }
+        .quote-button {
+            padding: 12px 30px;
+            border: none;
+            font-size: 17px;
+            font-weight: 600;
+            float: right;
+            
+            
+            background-color: #f7c02d;
+            text-decoration: none;
+            border-radius: 3px;
+            line-height: 25px;
+            cursor: pointer;
+
+        }
+        .quote-button a{
+            text-decoration: none;
+
+        }
+        .quote-button a{
+            text-decoration: none;
+            color: black;
+        }
+        .quote-button:hover{
+            text-decoration: none;
+            color:  #f7c02d;
+            background-color: black
+        }
+        .quote-button a:hover {
+            text-decoration: none;
+            color:  #f7c02d;
+            background-color: black
+        }
+
+
+
+        .theme-btn {
+            padding: 10px 30px;
+            font-size: 16px;
+            font-family: "Roboto", sans-serif;  
+                      
+        }
+
+        .search-box{
+            position: relative;
+            float: left;
+            padding: 22px 0;
+        }
+        .search-box-button{
+
+            display: inline-block;
+            vertical-align: middle;
+            position: relative;
+            margin-right: 34px;
+            padding-left: 20px;
+            border-left: 1px solid rgba(255, 255, 255, .20);
+        }
+
+        .item-content{
+            background-image: url("{% static 'images/image21.png' %}");
+            background-position: center center;
+            background-repeat: no-repeat;
+            width: 100%;
+            min-height: 100vh;
+            background-size: cover;
+        }
+        .item-text{
+            max-width: 600px;
+            margin: 0px 218px;
+            height: 400px;
+            padding: 132px 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: left;
+            font-family: 'Roboto', sans-serif;
+
+        }
+        .item-text h1{
+            left: 0px;
+            position: relative;
+            font-size: 130px;
+            color: #181818;
+            font-weight: 400;
+            line-height: 115px;
+            letter-spacing: 0px;
+            margin: 0;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+
+
+        }
+        .item-text h3{
+            left: 0px;
+            position: relative;
+            font-size: 40px;
+            color: #181818;
+            font-weight: 400;
+            line-height: 50px;
+            letter-spacing: 1px;
+            margin: 0;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+        .read-more{
+            font-weight: 500;
+            text-decoration: none;
+            position: relative;
+            font-size: 16px;
+            line-height: 25px;
+            color: #303030;
+            padding: 15px 50px;
+            font-weight: 700;
+            background: #f7c02d;
+            border-radius: 3px;
+        }
+  
+        .read-more:hover{
+            color: #f7c02d;
+            background-color: #303030;
+
+        }
+        .market-sectors{
+            font-weight: 500;
+            text-decoration: none;
+            position: relative;
+            font-size: 16px;
+            line-height: 25px;
+            color: #303030;
+            padding: 15px 50px;
+            font-weight: 700;
+            background: white;
+            border-radius: 3px;
+
+        }
+        .market-sectors:hover{
+            color: white;
+            background-color:#303030;
+
+
+        }
+
+/* Base Layout */
+.testimonials {
+    padding: 80px 0;
+    background-color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header Styles */
+.section-header {
+    margin-bottom: 80px;
+}
+
+.section-header .subtitle {
+    font-size: 14px;
+    font-weight: 700;
+    color: #f7c02d;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #f7c02d;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.section-header h2 {
+    font-size: 42px;
+    color: #262626;
+    margin-top: 15px;
+}
+
+/* Grid and Cards */
+.testimonial-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.testimonial-card {
+    background: #fff;
+    flex: 1;
+    min-width: 300px;
+    position: relative; /* Essential for image positioning */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    padding: 60px 30px 40px;
+    text-align: left;
+    margin-top: 40px; /* Space for the floating image */
+}
+
+/* The Yellow Accent Line on the left */
+.testimonial-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 40px;
+    width: 3px;
+    background-color: #f7c02d;
+}
+
+/* Floating Profile Images */
+.profile-img {
+    position: absolute;
+    top: -45px; /* Pulls image up */
+    left: 40px;
+}
+
+.profile-img img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Text Styles inside Card */
+.card-content h3 {
+    font-size: 20px;
+    color: #181818;
+    margin-bottom: 5px;
+}
+
+.card-content .designation {
+    color: #f7c02d;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.card-content .quote {
+    color: #777777;
+    font-size: 16px;
+    line-height: 1.8;
+    font-style: italic;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+    .testimonial-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .testimonial-card {
+        width: 100%;
+    }
+}
+    .fa-solid, .fas {
+        margin-right: 0px;
+        color: #f7c02d;
+
+    }
+    .bi, .bi-icon{
+ 
+/* Optional: rounds the corners of the gray box */
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .our-services-main{
+        background-color: white;
+        width: 100%;
+        height: auto;
+        padding: 0%;
+        margin: 0%;
+
+    }
+    .our-services-container{
+        width: 1400px;
+        margin: 0px auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .our-services-heading{
+        margin-top: 60px;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+    }
+    .img-container{
+
+        margin: 0px;
+        padding: 0px;
+        gap: 10px;
+        border-radius: 10px;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .overlay-text{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        text-align: center;
+        color: #f7c02d;
+        padding: 20px;
+    }
+        .icon-map{
+
+            left: 30px;
+            top: 0px;
+            color: #f7c02d;
+            font-size: 46px;
+
+        }
+        .machinery-icon-map{
+            font-family: 'machinery-icon' !important;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+
+        }
+        .bottom-text{
+            position: relative;
+            text-align: center;
+            margin-top:80px;
+            display: block;
+            font-size: 26px;
+            line-height: 1.2em;
+            color: #303030;
+            font-weight: 400;
+            margin-bottom: 10px;
+
+        }
+        .button-2{
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 25px;
+            color: #303030;
+            padding: 20px 40px;
+            border-radius: 3px;
+            text-transform: capitalize;
+            background-color: #f7c02d;
+            margin-right: 15px;
+            text-decoration: none;
+        }
+        .button-2:hover{
+            color: #f7c02d;
+            background-color: black;
+
+
+        }
+        .button-3{
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 25px;
+            color: #303030;
+            padding: 20px 40px;
+            border-radius: 3px;
+            text-transform: capitalize;
+            background-color: white;
+            text-decoration: none;
+        }
+        .button-3:hover{
+            color: white;
+            background-color: black;
+
+        }
+        .button-1{
+            margin: 10px 10px;
+            font-family: "Roboto", sans-serif;
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 25px;
+            color: black;
+            padding: 15px 30px;
+            border-radius: 3px;
+            background-color: #f7c02d;
+            margin-right: 15px;
+            text-decoration: none;
+            font-family: 'Open Sans', sans-serif;
+        }
+        .button-1:hover{
+            color: black;
+            background-color: #f7c02d;
+        }
+        .bi,.bi-icon{ 
+            background-color:#777777 ;
+            color: white;
+            font-size: 20px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content:center;
+    
+        }
+        .bi-icon:hover{
+            color: #f7c02d;
+        }
+        
+        
+
+        .icon-list {
+            display: flex;
+            line-height: 35px;
+            height: 35px;
+            width: 35px;
+            text-align: center;
+            align-items: center;
+            justify-content:center;
+
+            color: #808080;
+            background-color: white;
+            border-radius: 50%;
+            border: 1px solid #808080;
+        }
+        .icon-list:hover {
+            color: #f7c02d;
+        }
+        .achieve-container{
+            padding: 0%;
+            margin: 0%;
+            background-image: url("{% static 'images/image27.png' %}");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+            position: relative;
+        }
+        .achieve{
+            max-width: 1200px;
+            height: auto;
+            padding: 100px 0px;
+            margin: 0px auto;  
+            display: flex;
+            gap: 30px;
+        }
+        .achieve-text{
+            
+            flex: 1;
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            display: flex;
+            flex-direction: column;
+
+        }
+        .fun-fact{
+            color: #f2f2f2; 
+            line-height: 14px;
+            text-decoration:underline 2px solid #f7c02d;
+            display: inline-block;
+        }
+        .achieve-img{
+            flex: 1;
+
+            
+        }
+        .img-2{
+            max-width: 600px;
+            height: auto;     
+            object-fit: cover;
+            display: block;
+               
+        }
+        .icon-contaioner{
+            margin-top: 10px;
+
+        }
+        .machinery-icon-worldwide{
+            font-family: 'machinery-icon' !important;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+        }
+        .icon{
+            line-height: 80px;
+            font-size: 64px;
+            color: #f7c02d;    
+            margin-right: 20px;
+
+
+        }
+        .inner-text{
+            display: block;
+            font-size: 16px;
+            line-height: 26px;
+            color:#ADADAD;
+            font-weight: 400;
+            font-family: 'Roboto', sans-serif;
+
+
+        }
+        .locate-button{
+            color: #FFFFFF;
+            font-size: 17px;
+            font-weight: 700;
+            display: inline-block;
+            padding-left: 30px;
+            margin-top: 15px;   
+            position: relative;
+            vertical-align: middle;
+            transition: all .4s ease;
+            font-family: 'Roboto', sans-serif !important;
+            text-decoration: none;
+
+
+        }
+        .locate-button:hover{
+            padding-left:0 ;
+            color: #f7c02d;
+
+        }
+        .about-container{
+            width: 1200px;
+            height: 500px;
+            font-family: 'Roboto', sans-serif;
+            margin: 0 auto;
+            padding:0px 15px ;
+
+        }
+        .about{
+            margin: 80px 0px;
+            display: flex;
+
+        }
+        .about1{
+            flex: 1;
+
+        }
+
+        .about-list1{
+            background-color: #F5BE2D;
+            border-radius: 30px;
+            padding: 15px 15px;
+        }
+        .about-list1:hover{
+            background-color: #F5BE2D;
+            border-radius: 30px;
+            padding: 15px 15px;
+            box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+        }
+        .about-list{
+            border-radius: 30px;
+            padding: 15px 15px;
+        }
+
+        .about-list:hover{
+            background-color: #F5BE2D;
+            border-radius: 30px;
+            padding: 15px 15px;
+            box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+        }
+        .built-text{
+            font-size: 16px;
+            color: #848484;
+            line-height: 24px;
+            font-weight: 400;
+            display: block;
+        }
+        .read-text a{
+            color: #303030;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 26px;
+            display: inline-block;
+            font-family: "Roboto", sans-serif;
+            margin-top: 10px;
+
+        }
+         .machinery-icon-next{
+            display: inline-block;
+            position: relative;
+            font-family: 'machinery-icon' !important;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            vertical-align: middle;
+            line-height: 1;
+        }
+        .machinery-icon-next::before{
+            content: "\e908";
+            color: inherit;
+
+        }
+        .icon-box{
+            color: #f7c02d;
+            font-size: 46px;
+            line-height: 50px;
+            display: inline-block;
+            margin: 10px 20px;
+            float: none;
+            text-align: left;
+            vertical-align: middle;
+        }
+         
+        .about2{
+            flex: 1;
+            
+        }
+        .about2-container{
+            margin: 0 auto;
+            display: flex;  
+            flex-direction: column;      
+        }
+        .about2-block{
+            margin: 10px;
+            height: auto;      
+            display: flex;
+            text-align: left;
+            align-items: center;
+            justify-content: space-around;                 
+        }
+        .about2-icon{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 85px;
+            width: 95px;
+            top: 0px;
+            left: 0px;
+            border: 1px solid #f2f2f2;
+            border-radius: 50%;
+            font-size: 20px;
+            color: #303030;
+            background-repeat: no-repeat; 
+        }
+        .about2-icon::after{
+            position: absolute;
+            left: 50%;
+            top: 100%;
+            margin-top: 10px;
+            content: "";
+            height: 40px;
+            width: 1px;
+            background-color: #f2f2f2;
+        }
+
+        /* .about2-icon::after{
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%; 
+            width: 40px;
+            height: 2px;    
+            background-color: #efeded;
+            z-index: -1;
+        } */
+
+        .icon-gear{
+            background-image: url('{% static "images/image29.png" %}');
+        }
+        .about-text{
+            font-size: 15px;
+            line-height: 27px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            color: #777777;
+        }
+        .about2-block h4{
+            position: relative;
+            display: inline-block;
+            font-size: 20px;
+            line-height: 24px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            color: #303030;
+            font-weight: 400;
+            font-family: 'Roboto', sans-serif;
+        }
+        .about2-block:hover h4{
+            color: #f7c02d;
+
+        } 
+        .about2-block h4::after {
+            position: absolute;
+            content: "";
+            left: 0;
+            bottom: -5px;
+            width: 50px;
+            height: 2px;
+            background-color: #f7c02d;
+        }
+        /* .border-line{
+            display: inline-block;
+            border-bottom: 2px solid #F5BE2D;
+            padding-bottom: 5px;
+            width: 60px;  
+        } */
+        .icon-clock{
+            background-image: url('{% static "images/image30.png" %}');
+        }
+        .icon-worker{
+            background-image: url('{% static "images/image31.png" %}');
+        }
+        machinery-icon-next::before {
+            content: "\e908";
+        }
+        .project-section{
+            width: 100%;
+            color: #ffffff;
+            position: relative;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 100px 0;
+            background-image: url('{% static "images/image1.png" %}');
+        }
+        .project-section::before{
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            content: "";
+            background-color: #181818;
+            opacity: .90;
+        }
+        .auto-container{
+            flex-direction: column;
+            display: flex;
+            position: relative;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            max-width: 1300px;
+            padding: 0px 15px;
+            margin: 0 auto;
+            font-family: 'Roboto', sans-serif;
+        }
+        .title{
+            position: relative;
+            margin-bottom: 50px;
+            font-family: 'Roboto', sans-serif;
+        }
+        .title-heading{
+            font-size: 14px;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            line-height: 14px;
+        }
+        .title-heading::before {         
+            width: 100%;
+            display: inline-block;
+            background: #F7C02D;
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            height: 3px;
+            content: "";
+        }
+        .title h2{
+            font-size: 38px;
+            margin: 0;
+            display: inline-block;
+            line-height: 34px;
+        }
+        .box{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;              
+        }
+        .img-box1{
+            position: relative;
+            width: 370px;
+            overflow: hidden;
+        }
+        .title-box{
+            margin-bottom: 10px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            padding-left: 0px;
+            padding-bottom: 0px;
+        }
+        .title-box:hover{
+            margin-bottom: 50px;
+        }
+        .title-box::before{
+            display: inline-block;
+            position: absolute;
+            left: 30px;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            content: "";
+            background-color: #f7c02d; 
+            transition: all 500ms ease;
+        }
+        .img-box1:hover .title-box::before {
+            width: 60px; /* Line grows to 60px on hover */
+        }
+        .img-box1 >a::before{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 50%;
+            width: 100%;
+            content: "";
+            background: linear-gradient(to top, #000000, rgba(0, 0, 0, 0.80), transparent);
+        }
+        .title-box a{
+            position: relative;
+            display: block;
+            font-size: 20px;
+            line-height: 24px;
+            margin-bottom: 3px;
+            color: #ffffff;
+        }
+        .tag{
+            display: block;
+            font-size: 16px;
+            line-height: 26px;
+            font-weight: 400;
+            color: #f7c02d;
+        }
+
+        .Testimonials-heading{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+        .auto-container2{
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            max-width: 1240px;
+            padding: 0px 15px;
+            margin: 0 auto;
+            font-family: 'Open Sans', sans-serif;
+        }
+        .Testimonials-heading h4{
+            font-size: 14px;
+            margin-bottom: 70px; ;
+            display: inline-block;
+            line-height: 14px;
+            vertical-align: top;
+            color: #303030;
+            text-transform: uppercase;
+            position: relative;
+        }
+        .Testimonials-heading h4::before{
+            content: "";
+            width: 100%;
+            height: 3px;
+            background-color: #F7C02D;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        .Testimonials-heading h2{
+            font-size: 38px;
+            margin-top: 15px;
+            margin-bottom: 16px;
+            line-height: 46px;
+            font-weight: 600;
+            position: absolute;
+        }
+        .Testimonials-img-cards{
+            width: 100%;
+            padding: 0;
+            margin: 0% auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .Testimonials-img-card{
+            width: 453px;
+            margin-right: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: left;
+            top: 0%;
+        }
+        .inner-img-card{
+            padding-top: 35px;
+            padding-bottom: 35px;
+        }
+        /* .Testimonials-img-card p::before{
+            content: "";
+            top: 8px;
+            position: absolute;
+            height: 35px;
+            background: #F7C02D;
+        } */
+        .inner-box{
+            padding-left: 50px;
+            padding-right: 48px;
+            position: relative;
+            padding-top: 65px;
+            padding-bottom: 40px;
+            box-shadow: 0 2px 13px 2px rgba(0, 0, 0, 0.06);
+        }   
+        .inner-box p{
+            font-size: 18px;
+            color: #848484;
+            line-height: 30px;
+            position: relative;
+            border-bottom: 1px solid #f2f2f2;
+            margin-bottom: 20px;
+        }
+        .inner-box .Testimonials-img-card {
+            padding-left: 50px;
+            padding-right: 48px;
+            position: relative;
+            padding-top: 65px;
+            padding-bottom: 40px;
+            box-shadow: 0 2px 13px 2px rgba(0, 0, 0, 0.06);
+        }   
+
+        .client-img{
+            position: absolute;
+            top: -40px;
+            left: 55px;
+            width: 70px;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .inner-img-card h3{
+            margin-top:20px ;
+            margin-bottom: 15px;
+            color: #303030;
+            font-size: 20px;
+            font-weight: 500;
+        }
+        .expert{
+            padding: 0;
+            margin: 0;
+            background-color: #f7f7f7;
+            padding-bottom: 50px;
+            padding-top: 100px;
+            font-family: 'Open Sans', sans-serif;
+        }
+        .about-container3{
+            max-width: 1200px;
+            padding: 0 15px;
+            margin: 0 auto;
+        }
+        .expert-container{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            flex-direction: column;
+
+        }
+        .expert-container h4{
+            font-size: 14px;
+            color: #303030;
+            margin: 0;
+            display: inline-block;
+            line-height: 14px;
+            vertical-align: top;
+            text-transform: uppercase;            
+            position: relative;
+        }
+        .expert-container h4::before{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            content: "";
+            width: 100%;
+            height: 3px;
+            background-color: #f7c02d;
+        }
+        .expert-container h2{
+            padding-top: 14px;
+            padding-bottom: 22px;
+            font-size: 38px;
+            color: #303030;
+            margin-top: 11px;
+            display: inline-block;
+            line-height: 46px;
+            font-weight: 600;
+        }
+        .expert-text{
+            color: #777777;
+            font-size: 17px;
+            line-height: 25px;
+            padding: 10px 0px 10px 14px;
+        }
+        .contact-section{
+            background: #fff;
+            font-family: 'Roboto', sans-serif;
+            padding: 60px 10px;
+            width: 49%;
+            height: 100%;
+
+        }
+        /* .contact-section::before{
+            content: "";
+            height: 50%;
+            width: 100%;
+            background: #f7f7f7;
+            position: absolute;
+            top: 0;
+            left: 0;
+        } */
+        .auto-container3{
+            max-width: 1200px;
+            padding: 0 15px;
+            margin: 0 auto;            
+            position: relative;
+        }
+        .inquiry-container{
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+        }
+        .expert-overlay-text{
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            padding-bottom: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;            
+            position: absolute;
+        }
+        .inner-box2{
+            width: 100%;
+            max-width: 300px;
+            height: 400px;
+            background-image: url("{% static 'images/image41.png' %}");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        } 
+        .inner-box2 h3{
+            color: #FFFFFF;
+            font-size: 36px;
+            line-height: 40px;
+            font-weight: 400;
+            width: 55%;
+            margin-bottom: 40px;    
+            font-family: 'Roboto', sans-serif;
+        }
+        .button5{
+            position: relative;
+            text-decoration: none;
+            font-size: 16px;
+            line-height: 25px;
+            padding: 20px 50px;
+            font-weight: 700;
+            text-transform: capitalize;
+            border-radius: 3px;
+            color: #303030;
+            background-color: #f7c02d;
+            font-family: "Roboto", sans-serif;
+        }
+        .expert-text-container{
+            margin: 0;
+            padding: 0;
+        }
+        .expert-text2{
+            margin-top: 40px;
+            box-shadow: 0px 10px 13.5px 1.5px rgba(0, 0, 0, 0.05);
+        }
+        .expert-text3{
+            top: 0;
+            left: 0;
+            right: 0;
+            max-width: 770px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 45px 50px 30px;
+        }
+        .inquiry-container{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0px;
+
+        }
+        .img-container{
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+        /* .image-box{
+            width: 400px;
+            height: 450px;
+            background-image: url("{% static 'images/image41.png' %}");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        } */
+        .expert-text-container{
+            flex: 1;
+            padding: 0;
+            margin: 0;
+            background-color: #ffffff;
+            box-shadow: 0px 10px 13px 1px rgba(0, 0, 0, 0.05);
+        }
+        .inner-box2{
+            width: 100%;
+            max-width: 300px;
+            height: 400px;
+            padding: 50px;
+            background-image: url("{% static 'images/image41.png' %}");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+        } 
+        .inner-box2 h3{
+            color: #FFFFFF;
+            font-size: 36px;
+            line-height: 40px;
+            font-weight: 400;
+            width: 55%;
+            margin-bottom: 40px;    
+            font-family: 'Roboto', sans-serif;
+        }
+        .expert-text-container{
+            display: flex;
+            flex-direction: column;
+
+        }
+        .expert-text{
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            font-size: 18px; text-align: left;
+            padding: 6px 78px 9px 21px;
+            width: 100%;
+
+        }
+        .form-group{
+            margin: 10px 18px;
+            display: block;
+            width: 49%;
+            height: 50%;
+            font-size: 16px;
+            line-height: 30px;
+            color: #848484;
+            font-weight: 400;
+            padding: 14px 153px 14px 20px;
+            background-color: #ffffff;
+            border: 1px solid #efefef;
+            position: relative;
+            font-family: 'Roboto', sans-serif;
+        }
+        .form-group2{
+            margin: 10px 18px;
+            display: block;
+            width: 53%;
+            height: 50%;
+            font-size: 16px;
+            line-height: 30px;
+            color: #848484;
+            font-weight: 400;
+            padding: 14px 153px 14px 20px;
+            background-color: #ffffff;
+            border: 1px solid #efefef;
+            position: relative;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .form-group3{
+            margin: 21px 18px;
+            display: block;
+            width: 96%;
+            height: 20%;
+            font-size: 16px;
+            line-height: 30px;
+            color: #848484;
+            font-weight: 400;
+            padding: 0 0;
+            background-color: #ffffff;
+            border: 1px solid #efefef;
+            position: relative;
+            font-family: 'Roboto', sans-serif;
+        }
+
+
+        .submit{
+            display: block;
+            width: 100%;
+            font-size: 16px;
+            font-weight: 700;
+            padding: 16px 50px;
+            background: #F7F7F7;
+        }
+        .submit:hover{
+            background: #303030;
+            color: #f7c02d;
+        }
+        .news-title{ 
+            font-family: 'Roboto', sans-serif;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        .row{
+            padding:0 15px;
+            display: flex;
+            justify-content:center;
+            text-align: left;
+            align-items: center;
+            gap: 10px;             
+
+        }
+        .row1{
+            display: flex;
+            flex-direction: column;
+            font-weight: 600;
+            color: #303030;
+
+        }        
+        .row1 h4{
+            font-size: 14px;
+            line-height: 14px;
+            margin-bottom: 15px;
+            vertical-align: top;
+            text-transform: uppercase;
+            position: relative;            
+            display: inline-block;
+
+        }
+        .row1 h4::before{
+            display: inline-block;
+            position: absolute;
+            content: "";
+            width:100%;
+            height: 3px;
+            background-color: #f7c02d;
+            left: 0;
+            bottom: 0;
+
+        }
+
+        .row1 h2{
+            font-size: 38px;
+            line-height: 46px;
+        }
+        .row2{
+            padding: 13px 0;
+            color: #777777;
+            font-size: 17px;
+        }
+        .row3{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+        .more-news-button{
+            background-color: #f7c02d;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 48px;
+            border-radius: 3px;
+            color: #303030;
+            font-weight: 600;
+            font-size: 16px;
+            font-family: "Roboto", sans-serif;           
+            line-height: 25px;
+            margin: 5px 0px 6px 7px;   
+        }
+        .more-news-button:hover{
+            background-color: #303030;
+            color: #f7c02d;
+        }
+        .news-title-img-cards{
+            font-family: "Roboto", sans-serif;
+            padding: 0%;
+            margin: 0% auto;
+        }
+        .news-title-img-card{
+            margin-left:10px ;
+            margin-bottom: 40px;
+            margin-right: 10px;
+        }
+        .news-title-image-box{
+            padding: 0;
+            position: relative;
+        }
+        .news-title-image-box a:hover::before{
+            content: "";
+            max-width: 370px;
+            width: 100%;
+            height: 100%;
+            background-image: url("{% static 'images/image48.png' %}");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-color: #181818;
+            opacity: 0.90;
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: inline-box;
+        }
+        .info{
+            margin-bottom: 10px;
+            font-family: "Roboto", sans-serif;
+        }
+        .info li{
+            color: #303030; 
+            font-weight: 500; 
+            text-decoration: none; 
+            font-family: "Roboto", sans-serif;
+        }
+
+        .info li a{ 
+            display: flex;
+            flex-direction: row;
+            color: #848484; 
+            font-weight: 500; 
+            font-size: 14px;
+            line-height: 24px;
+            text-decoration: none; 
+            text-transform: uppercase;
+        }
+        .info li a:hover{ 
+            color: #f7c02d; 
+        }
+        .news-title-img-card h3 a{
+            color: #222222;
+            display: inline-block;
+            text-decoration: none;
+            margin-bottom: 20px;
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 30px;
+        }
+        .news-title-img-card h3 a:hover{
+            color: #f7c02d;
+
+
+        }
+        .text5{
+            display: block;
+            color: #848484;
+            font-size: 16px;
+            line-height: 26px;
+            margin-bottom: 20px;
+        }
+        .more-box{
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border: 1px solid #f2f2f2;
+            border-left: 0;
+            border-right: 0;
+            position: relative;
+        }
+        .auther-name{
+            display: flex;
+            justify-content: left;
+            text-align: left;
+            align-items: center;
+            text-transform: uppercase;
+        }
+        .auther-link-box{
+            display: inline-flex;
+            gap: 10px;
+            font-size: 16px;
+            align-items: center;
+            cursor: pointer;
+        }
+        .auther-link-box .text6{
+            opacity: 0;
+            transform: translateX(-15px);
+            transition: 0.4s ease;
+        }
+        .auther-link-box:hover .footer-link-hover{
+            opacity: 1;
+            text-decoration: underline;
+            transform: translateX(0);
+        }
+        .auther-link-box:hover .text6{
+            opacity: 1;
+            transform: translateX(0px);
+        }
+        .footer-link-hover{
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(-10px); 
+        }
+        .auther-link-box .
+        /* .auther-link-box a{
+            display: flex;
+            text-align: right;
+            position: relative;
+            font-size: 16px;
+            line-height: 30px;
+            font-weight: 700;
+            color: #303030;
+            text-decoration: none;
+
+        } */
+         /* .auther-link-box a:hover{
+            display: flex;
+            text-align: right;
+            position: relative;
+            font-size: 16px;
+            line-height: 30px;
+            font-weight: 700;
+            color: #303030;
+
+        } */
+        /* .icon5 .icon-aroow-right{
+            top: 0;
+            right: 0;
+            position: absolute;
+            width: 100%;
+            height: 30px;
+            background-color: #ffffff;
+            background-image: url("{% static 'images/image50.png' %}");
+            background-repeat: no-repeat;
+            background-position: center right;
+        } */
+        .client-carousel-wrapper{
+            background-color: #F7C02D;
+            padding: 41px 0;
+        }
+        .client-carousel-imgs{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            position: relative;
+        }
+        /* .client-carousel-imgs li{
+            position: relative;
+        } */
+        /* .client-carousel-imgs li::before{
+            position: absolute;
+            width: 1px;
+            height: 55px;    
+            background: #d9a928;
+            position: absolute;
+            top: 50%;
+            right: 0px;
+
+        } */
+        .main-footer{
+            background-color: #000000;
+            padding: 0;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+        .auto-container3{
+            max-width: 1200px;
+            padding: 0 15px;
+            margin: 0 auto;            
+        }
+        .footer-main-div{
+            display: flex;
+            justify-content: space-between;
+            text-align: center;      
+            align-items: center;      
+
+        }
+        .footer-div1{
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            text-align: left;
+            margin-top: 100px;
+
+        }
+        .footer-div1 h4{
+            color: #FFFFFF;
+            font-size: 18px;
+            font-weight: 500;
+            margin: 20px 0;
+        }
+        .footer-div1 p{
+            font-size: 16px;
+            font-weight: 400;
+            color: #848484;
+            line-height: 22px;
+        }
+
+        .subcription{
+            padding-left: 0;
+            
+
+        }
+        .subcription input{ 
+            border: none;
+            color: #4C4C4C;
+            background-color: transparent;
+            font-size: 16px;
+            font-weight: 400;
+            display: block;
+            width: 100%;
+            padding-bottom:5px ;
+            margin-bottom: 10px;
+            border-bottom:1px solid rgba(255, 255, 255, .3);
+        }
+        .subcription button{
+            border: none;
+            color: #FFFFFF;
+            font-size: 16px;
+            font-weight: 600;
+            padding-left: 30px;  
+            background-color: transparent;
+
+        }
+        .subcription button:hover{
+            padding-left: 0px;
+            color: #F7C02D;
+        }
+        .footer-div2{
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            text-align: left;
+            margin-top: 100px;
+        }
+        .footer-div2 h2{
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 700;
+            display: block;
+            line-height: 29px;
+            position: relative;
+            margin-top: 15px;
+            
+        }
+        .footer-div2 h2::before{
+            position: absolute;
+            content: "";
+            width: 51px;
+            height: 2px;
+            top: -15px;
+            left: 0;
+            background-color: #f7c02d;
+        }
+
+        .widget-content {
+            color: #848484;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 22px;
+            margin: 20px 0;
+            padding-left :20px ;
+            text-transform: capitalize;
+            transition: all 300ms ease;
+
+        }
+        .footer-div3{
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            text-align: left;
+            margin-top: 100px;
+        }
+        .footer-div3-inner-box{
+            padding: 20px 20px;
+            background-color: #232323;
+        }
+        .text-box{
+
+
+        }
+        .text-box h3{
+            color: #fff;
+            font-size: 14px;
+            font-weight: 700;
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        
+
+    </style>
+</head>
+<body>
+
+   <!-- main div -->
+    <div style="display: flex;">
+        <!-- first div -->
+        <div style="display: flex; width: 260px;"> 
+            <div style="border-bottom:1px solid #efeded;width: 100%; padding: 0px 60px;height: 74px;"></div>
+        </div>
+        <!-- close first div -->
+
+         <!-- start section 2 -->
+        <div style="display: flex; width: 420px; border-left: 1px solid #efeded; border-right: 1px solid #efeded; padding: 50px 20px;">
+            <img src="{% static 'images/image26.png' %}" alt="img" style="width: 277px; height:77px ;">
+        </div>
+        
+
+        <div style="width: 100%;">
+            <div style="border-bottom: 1px solid #efeded;">
+
+            <div style="display: flex; justify-content: space-between;  width: 850px;padding:0px 0px;">
+                <div style="padding-left: 20px; color: #808080; text-decoration: none;">
+                    <ui style="display: flex; gap: 20px; font-size: 15px; list-style: none; align-items: left;padding: 20px 10px; ">
+                        <li>News & Updates</li>
+                        <li>Careers</li>
+                        <li>Login</li>
+                    </ui>
+
+                </div>
+                <div style=" color: #777777; text-decoration: none;">
+                    <ui style="display: flex; gap: 10px; font-size: 15px; list-style: none;align-items: center;padding: 20px 10px;">
+                        <li><i class="fas fa-clock "></i></li>
+                        <li style="padding: 0px 50px 0px 0px; font-weight: normal;">Mon - fri: 9:00 - 18:00</li>
+                        <li><i class="fas fa-globe"></i></li>
+                        <li style="font-weight: normal;">California</li>
+
+                    </ui>
+                </div>
+            </div>
+            
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; ">
+                <div style="padding-left: 20px; color: #777777; text-decoration: none;width:846px">
+                    <ul style="display: flex; gap: 30px; font-size: 15px; list-style: none; align-items: center; text-decoration: none; line-height: 30px; justify-content: right; padding-top:25px">
+                        <li >
+                            <div class="icon-box"> 
+                                <span class="machinery-icon-map"></span>
+                            </div>
+                               
+                        </li>
+                        <li>
+                            <p style="font-weight: normal; ">13, Big Smart Str, 2nd Cross</p>
+                            <p style="font-weight: 500;color: #777777; " >Newyork, USA 1002.</p>
+                        </li>
+                        <li >
+                            <p style="font-weight: 400; ">1-800-784-533 & 544</p> 
+                            <p style="font-weight:500; color: #130909;">Machinery@Support.com</p>
+                        </li>
+                        <li style="display: flex; flex-direction: row; gap: 10px;" > 
+                            <i class="icon-list" ><a href=""></a><span class="fab fa-facebook-f"></span></i>
+                            <i class="icon-list" ><a href=""></a><span class="fab fa-twitter"></span></i>
+                            <i class="icon-list" ><a href=""></a><span class="fab fa-linkedin-in"></span></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+        <header class="" style="background-color: #181818; padding: 20px 0px;">
+            <div class="" style="width: 1200px; margin: auto;     font-family: 'Open Sans', sans-serif;">
+                <ul class="" style="display: flex; list-style: none; gap:20px; font-size: 17px;font-weight:600;color: #efeded;align-items: center; justify-content: space-around;">
+                    <li><a href="https://st.ourhtmldemo.com/new/Machinery/#" style="color: #efeded; text-decoration: none;">Home</a></li>
+                    <li><a href="https://st.ourhtmldemo.com/new/Machinery/#" style="color: #efeded; text-decoration: none;">About Us</a></li>
+                    <li><a href="https://st.ourhtmldemo.com/new/Machinery/#" style="color: #efeded; text-decoration: none;">Market Sectors</a></li>
+                    <li><a href="https://st.ourhtmldemo.com/new/Machinery/#" style="color: #efeded; text-decoration: none;">Projects</a></li>
+                    <li><a href="https://st.ourhtmldemo.com/new/Machinery/#" style="color: #efeded; text-decoration: none;">News</a></li>
+                    <li><a href="https://st.ourhtmldemo.com/new/Machinery/#" style="color: #efeded; text-decoration: none;">Shop</a></li>
+                    <li><a href="https://st.ourhtmldemo.com/new/Machinery/#" style="color: #efeded; text-decoration: none;">Contact Us</a></li>
+                    <li>
+                        <a href="https://st.ourhtmldemo.com/new/Machinery/shoping-cart.html" class="">shoping</a>
+                    </li>
+                    <li>
+                        <div>
+                            <a href="">Search</a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="https://st.ourhtmldemo.com/new/Machinery/contact.html"  class="button-1">Get A Quote</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+    <div class="item-content" style="display: flex; align-items: center;">
+        <div class="" style="width:1200px; margin:auto; display: flex; align-items: center;height: 650px; padding-left: 50px; padding-top: 0px; ">
+            <div class="" style="width: 500px; height: 336px; border-left:3px solid #f7c02d ;padding-left: 50px;
+                font-family: 'Roboto', sans-serif; letter-spacing: 0px;  ">
+              
+                <h3 style="padding: 5px 0px;font-size: 24px; color: #181818; line-height: 18px; font-weight:500; margin: 0;" >Warm welcome to</h3>
+           
+            
+                <h1 style="padding: 5px 0px; font-size: 120px; font-weight: 400;">Machinery</h1>
+         
+            
+                <h3 style=" padding: 5px 0px; font-size: 18px; line-height: 30px; color: #181818; font-weight: 500; margin-bottom: 20px;">Over 24 years experience and knowledge international standards,
+                technologicaly changes and industrial systems</h3>
+                <a href="https://st.ourhtmldemo.com/new/Machinery/#" class="button-2" >Read More</a>
+                <a href="https://st.ourhtmldemo.com/new/Machinery/#" class="button-3" >Market Sectors</a>
+
+            
+            </div>
+        </div>
+    </div>             
+    <div style="clear: both;"></div>
+
+
+
+    <!-- our services ---->
+    <section class="our-services-main">
+        <div class="our-services-container" >
+            <div class="our-services-heading"  >
+                <h4 style="text-transform: uppercase; margin-bottom: 30px ;" >Our Services</h4>
+                <h2 style="margin-bottom: 60px ;">Our Market Sectors</h2>
+            </div>
+            <div class="img-container">
+                <div>
+                    <img src="{% static 'images/image23.png' %}" alt="image-card" style="border-radius: 10px;">
+
+
+                </div>
+                <div>
+                    <img src="{% static 'images/image24.png' %}" alt="image-card" style="border-radius: 10px; ">
+                </div>
+                <div>
+                    <img src="{% static 'images/image25.png' %}" alt="image-card" style="border-radius: 10px;">
+                </div>
+        
+            </div>
+            <div class="bottom-text">
+                <h3 >
+                Since 1964, We provide best solutions for our valuable customers.</h3>
+                <a href="http://127.0.0.1:8000/blogs/practice/" style="font-family: 'Open Sans', sans-serif;"><i style="        display: inline-block;
+                font-size: 18px;
+                line-height: 1.2em;
+                color: #f7c02d;
+                font-weight: 400;
+                margin-right: 10px; margin-bottom: 40px;">
+                Getaquote@Machinery.com</i></a>
+            </div>
+        </div>
+
+    </section>
+    <!-- what we achieve -->
+     <section class="achieve-container ">
+        <div class="achieve" >
+            <div class="achieve-text" >
+                <h4 class="fun-fact" >FUN FACTS</h4>
+                <h2 style="color: rgb(255, 255, 255);margin-top: 17px; font-size: 36px; line-height: 46px; font-weight: 600; ">What We Achived?</h2>
+                <h5 style="color: rgb(247, 192, 45); font-weight: 400; margin-top: 17px; font-size: 18px; ">Strength and growth comes only through continuous effort & struggle.</h5>
+                 <!-- <div class="icon-contaioner">
+                    <span class=" machinery-icon-worldwide"></span>
+                    <span>148
+                        <span></span>
+                    </span>
+
+                    <span></span>
+                </div> -->
+                <div class="inner-text" style="margin-top: 30px;">
+                    <p>Over 148+ branches indignation & dislike men who beguiled demoralized</p>
+                    <p>by the charms of pleasure of the moment, so blinded by desire, that they</p>
+                    <p>cannot foresee the pain and over all trouble.</p>
+                </div>
+                <a href="https://st.ourhtmldemo.com/new/Machinery//index.html#" class="locate-button" >
+                    <i  ></i>Locate Our Branches
+                </a>
+
+            </div>
+            <div class="achieve-img">
+                <img src="{% static "images/image28.png" %}" alt="" style="width: 100%;
+                    height: auto;
+                    display: block; " class="img-2 ">
+                <a href="https://www.youtube.com/watch?v=Fvae8nxzVz4"></a>                
+            </div>
+
+        </div>
+
+    </section >
+    <!-- about section------------------------------------------------------------------------------------------------- -->
+    <section style="padding: 0%; margin: 0%; background-color: #fff;  " >
+        <div class="about-container" >
+            <div class="about" >
+                <div class="about1 " >
+                    <h4 style="font-size: 14px; margin: 0; color: #303030; text-transform: uppercase; display: inline-block; line-height: 14px; 
+            border-bottom: 4px solid #F5BE2D; ">Company</h4>
+
+                    <h2 style=" margin-top: 17px; line-height: 46px; font-size: 36px ;">About Our Company</h2>
+                    <h4 style="font-size: 24px; line-height: 32px; color: #303030; font-weight: 400; margin-bottom: 30px; margin-top: 13px;">We are leading manufacturing company in european
+                        <br>
+                        countries, serving sice 1964.</h4>
+                    <div style="display: flex; flex-direction: row;">
+                        <div style="display: flex; flex-direction: column;" >
+                            <ul  style="display: flex; flex-direction: row; list-style: none; gap: 35px;"  >
+                                <li class="about-list1" >About Company</li>
+                                <li class="about-list" >Our Mission</li>
+                                <li class="about-list" >Our Vision</li>
+                            </ul>
+                            <div style="display: flex; flex-direction: column; margin-top: 20px;" >
+                                <h3 style=" font-size: 20px; line-height: 27px; color: #303030; font-weight: 400; ">We are Reliable & Experienced manufacturing Company.</h3>
+                                <div class="built-text"             style="margin-top: 20px;">   
+                                    Built enviable reputation in consumer goods, heavy industry, high tech, manufacturing, medical, vehicle our works sectors multi disciplinary team of engineering & experts, who pursues desires.
+                                </div>
+                                <div class="read-text" style="padding-top:20px; " >
+                                    <a href="market-sector-single.html" style="text-decoration: none; " >
+                                        <span class="machinery-icon-next"></span>Read More
+                                    </a>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about2"   >
+                    <div class="about2-container" >
+                        <div class="about2-block"> 
+                                <span class="about2-icon icon-gear" ></span>
+                            <div style="display: flex; flex-direction: column; margin-left:20px;">
+                                <h4  style="width: 100%;" >
+                                <a href="https://st.ourhtmldemo.com/new/Machinery/market-sector.html" style="text-decoration: none; color:#303030 ; " >Smart Technology
+                                </a>
+                                </h4>   
+                                <div class="about-text">
+                                    Encounter consequences that are extremely our painful again is there desires.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="about2-block"> 
+                                <span class="about2-icon icon-clock"></span>
+                            <div style="display: flex; flex-direction: column; margin-left:20px;">
+                                <h4  style="width: 100%;" >
+                                <a href="https://st.ourhtmldemo.com/new/Machinery/market-sector.html " style="text-decoration: none; color:#303030 ; " >Punctual Delivery Time
+                                </a>
+                                </h4>   
+                                <div class="about-text">
+                                    To take trivial example, which of us ever physical except to obtain some advantage.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="about2-block"> 
+                                <span class="about2-icon icon-worker"></span>
+                            <div style="display: flex; flex-direction: column; margin-left:20px;">
+                                <h4  style="width: 100%;" >
+                                <a href="https://st.ourhtmldemo.com/new/Machinery/market-sector.html" style="text-decoration: none; color:#303030 ; " >Team of Professionals
+                                </a>
+                                </h4>   
+                                <div class="about-text">
+                                    Any right to find fault with a man who chooses to enjoy a pleasure that has no annoying..
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </section>
+    <!--  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <section >
+        <div class="project-section" >
+            <div class="auto-container" >
+                <div class="title">
+                    <h4  class="title-heading">OUR WORKS</h4>
+                    <h2 style="width: 100%;">Latest Projects</h2>
+                </div>
+
+                <div class="box" >
+                    <div class="img-box1" style="padding-top:50px ;">
+                        <a href="http://127.0.0.1:8000/blogs/practice/"><img src="{% static 'images/image33.png' %}" alt="" style="height: 500px;" ></a>
+                        <div class="title-box">
+                            <h4>
+                                <a href="https://st.ourhtmldemo.com/new/Machinery/projects-single.html" style="text-decoration: none;">Generate Natural Power</a>
+                            </h4>
+                            <span class="tag">Power & Energy</span>
+                        </div>
+                    </div>
+                    <div class="img-box1" style="padding-top:0px ;">
+                        <a href="http://127.0.0.1:8000/blogs/practice/"><img src="{% static 'images/image35.png' %}" alt="" style="height: 588px; bottom: 0%; width: 430pxpx;"></a>
+                        <div class="title-box">
+                            <h4>
+                                <a href="https://st.ourhtmldemo.com/new/Machinery/projects-single.html" style="text-decoration: none;">Rail Engine Manufacture</a>
+                            </h4>
+                            <span class="tag">Engineering</span>
+                        </div>
+                    </div>
+                    <div class="img-box1" style="padding-top:50px ;">
+                        <a href="http://127.0.0.1:8000/blogs/practice/"><img src="{% static 'images/image34.png' %}" alt="" style="height: 500px;"></a>
+                        <div class="title-box">
+                            <h4>
+                                <a href="https://st.ourhtmldemo.com/new/Machinery/projects-single.html" style="text-decoration: none;">Rail Engine Manufacture</a>
+                            </h4>
+                            <span class="tag">Construction</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials--------------------------------------------------------------------------------------- -->
+
+    <section style="padding: 100px 0 120px;">
+        <div class="auto-container2">
+            <div class="Testimonials">
+                <div class="Testimonials-heading">
+                    <h4 >Testimonials</h4>
+                    <h2 >Words From Our Customers</h2>
+                </div>
+            </div>
+            <div class="Testimonials-img-cards">
+                <div class="Testimonials-img-card">
+                    <div class="inner-img-card">
+                        <div class="inner-box">
+                            <img src="{% static 'images/image5.png' %}" alt="" class=" client-img">
+                            <h3>Ellis Strausser</h3>
+                            <span style="color: #F7C02D;
+                                font-size: 16px;">Manager, Genologics</span>
+                            <p style="padding: 20px 0;">
+                                “Idea of denouncing and serve praising pain was born I will give completes accounts of systems anyone loves work pursues or indications desires ”.
+                            </p>
+                            <img src="{% static 'images/image36.png' %}" alt="Awesome image" class="company-logo">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="Testimonials-img-card">
+                    <div class="inner-img-card">
+                        <div class="inner-box">
+                            <img src="{% static 'images/image37.png' %}" alt="" class=" client-img">
+                            <h3>Ellis Strausser</h3>
+                            <span style="color: #F7C02D;
+                                font-size: 16px;">Manager, Genologics</span>
+                            <p style="padding: 20px 0;">
+                                “Idea of denouncing and serve praising pain was born I will give completes accounts of systems anyone loves work pursues or indications desires ”.
+                            </p>
+                            <img src="{% static 'images/image39.png' %}" alt="Awesome image" class="company-logo">
+                        </div>
+                    </div>
+                </div>
+                <div class="Testimonials-img-card">
+                    <div class="inner-img-card">
+                        <div class="inner-box">
+                            <img src="{% static 'images/image44.png' %}" alt="" class=" client-img">
+                            <h3>Ellis Strausser</h3>
+                            <span style="color: #F7C02D;
+                                font-size: 16px;">Manager, Genologics</span>
+                            <p style="padding: 20px 0;">
+                                “Idea of denouncing and serve praising pain was born I will give completes accounts of systems anyone loves work pursues or indications desires ”.
+                            </p>
+                            <img src="{% static 'images/image40.png' %}" alt="Awesome image" class="company-logo">
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- our expert ------------------ -->
+     <section class="expert">
+        <div class="auto-container3">
+            <div class="expert-container">
+                <h4>Ask Our Expert</h4>
+                <h2>Request For Free Quote</h2>
+            <div class="expert-text" style="text-align: center;">
+                Your details are kept strictly confidential as per our company privacy policy, Pleasure & praising
+                <br>
+                was we will give you a complete.
+            </div>
+            </div>
+        </div>
+     </section>
+    
+     <section >
+        <div style="width: 1200px; display: flex;margin: auto;gap: 20px;">
+           <div class="inner-box2">
+                        <h3>50% Off For Popular Machine</h3>
+                        <a href="#" class="button5">Buy Now</a>
+                    </div>
+        
+        <div class="contact-section">
+                <div class="inquiry-container" style="width: 100%; height: 100%;">
+                    <div class="">
+                        <div class="expert-text" >
+                            For Business: For Business inquiry fill our feedback form and Troll Free Number
+                            
+                            - (+91) 00-700-6202, our team will help you with in 24 hours.
+                        </div>
+                        <div style="display: flex; flex-direction: row; gap: 0;">
+                            <div style="display: flex; flex-direction: column; gap: 0;">
+                                <div class="form-group">
+                                    <input type="text" name="username" value placeholder="Your Name" style="font-size: 16px;" >
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="email" value placeholder="Email Address" style="font-size: 16px;" >
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="" value placeholder="Select Service" style="font-size: 16px;">
+                                </div>
+                            </div>
+   
+                        
+                            <div>
+                                <div class="form-group2">
+                                    <input type="text" name="Message" value placeholder="Message" style="font-size: 16px;">
+                                </div>
+                                <div class="form-group3">
+                                    <button type="submit" class="submit">Submit Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+          </div>
+     </section>
+     <!--News & Updates ------------------------------------------------------------ -->
+     <section style="padding: 100px 0; margin: 0;">
+        <div class="auto-container3">
+            <div class="news-title">
+                <div class="row" >
+                    <div class="row1" style="flex: 1 337px;" >
+                       <h4> News & Updates</h4>
+                       <h2>Latest From Blog</h2>
+                    </div>
+                    <div class="row2" style="flex: 1 444px; margin-right: 90px;">
+                        Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain.
+                    </div>
+                    <div class="row3" style="">
+                        <a href="" style="text-decoration: none; " class="more-news-button">More News</a>
+                    </div>
+                </div>
+            </div>
+            <div class="news-title-img-cards" style="display: flex; flex-direction: row;">
+                <div class="news-title-img-card" >
+                    <div class="news-title-image-box" >
+                        <a href="#">
+                            <img src="{% static 'images/image47.png' %}" alt="">
+                        </a>
+                    </div>
+                    <div class="info">
+                        <ul style="list-style: none; display: flex; ">
+                            <li >
+                                <a href="#" style="color: #f7c02d;" >Construction</a>
+                            </li>
+                            <li>
+                                <a href="#"  style="padding-left: 20px;"> June 06,2019 </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <h3>
+                        <a href="#" style="text-decoration: none;">
+                            We are best for any industrial & business solution.
+                        </a>
+                    </h3>
+                    <div class="text5">
+                        Rationally encounter consequences seds ut that are extremely painful and when to do what we like beat circumtances and owing...
+                    </div>
+                    <div class="more-box">
+                        <div class="auther-name">
+                            <img src="{% static 'images/image49.png' %}" alt="" style="    width: 30px; border-radius: 50%;"> 
+                            <span style="margin-left: 20px; font-size: 14px; color: #848484; " >Divina Bulls</span>
+                        </div>
+                        <div class="auther-link-box">
+                            <a href="#">Read More</a>
+                            <span class=" icon-aroow-right"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-title-img-card" >
+                    <div class="news-title-image-box" >
+                        <a href="#">
+                            <img src="{% static 'images/image47.png' %}" alt="">
+                        </a>
+                    </div>
+                    <div class="info">
+                        <ul style="list-style: none; display: flex;">
+                            <li >
+                                <a href="#" style="color: #f7c02d;" >manufacturing</a>
+                            </li>
+                            <li>
+                                <a href="#" style="padding-left: 20px;"> June 06,2019 </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <h3>
+                        <a href="#" style="text-decoration: none;">
+                            10 reason why should choose our industry.
+                        </a>
+                    </h3>
+                    <div class="text5">
+                        How all this mistaken idea denoncing praising pain was born and we will gives you a completed teachings great explorer the truth...
+                    </div>
+                    <div class="more-box">
+                        <div class="auther-name">
+                            <img src="{% static 'images/image51.png' %}" alt="" style="    width: 30px; border-radius: 50%;"> 
+                            <span style="margin-left: 20px; font-size: 14px; color: #848484; " >Emilio Kemmer </span>
+                        </div>
+                      
+                        <div class="auther-link-box">
+                               <span style="font-size: 20px; ; " class="text5">&#8594</span>
+                               <a href="#" class="footer-link-hover">Read More 1</a>
+                            <!-- <span class=" icon-aroow-right"></span> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="news-title-img-card" >
+                    <div class="news-title-image-box" >
+                        <a href="#">
+                            <img src="{% static 'images/image53.png' %}" alt="">
+                        </a>
+                    </div>
+                    <div class="info">
+                        <ul style="list-style: none; display: flex; display: flex;">
+                            <li >
+                                <a href="#" style="color: #f7c02d;" >Technology</a>
+                            </li>
+                            <li>
+                                <a href="#" style="padding-left: 20px;"> June 06,2019 </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <h3>
+                        <a href="#" style="text-decoration: none;">
+                            We won best factory award of the year 2015 & 16.                        </a>
+                    </h3>
+                    <div class="text5">
+                        Desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur which toil and pain can procure...
+                    </div>
+                    <div class="more-box">
+                        <div class="auther-name">
+                            <img src="{% static 'images/image52.png' %}" alt="" style="width: 30px; border-radius: 50%;"> 
+                            <span style="margin-left: 20px; font-size: 14px; color: #848484; " >Christin Serrell</span>
+                        </div>
+                        <div class="auther-link-box">
+                            <a href="#">Read More</a>
+                            <span class=" icon-aroow-right"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+     <!-- ---------------------------------------- -->
+      <section class="client-carousel-wrapper">
+        <div class="auto-container3">
+            <div class="client-carousel-imgs">
+                <ul  style="list-style: none; display: flex; ">
+                    <li class=""><img src="{% static 'images/image55.png' %}" alt="" style="width: 230px; margin-right: 30px;"></li>
+                    <li><img src="{% static 'images/image56.png' %}" alt="" style="width: 230px; margin-right: 30px;"></li>
+                    <li><img src="{% static 'images/image57.png' %}" alt="" style="width: 230px; margin-right: 30px;"></li>
+                    <li><img src="{% static 'images/image58.png' %}" alt="" style="width: 230px; margin-right: 30px;"></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- <div class="main-footer">
+        <div class="auto-container3">
+            <div class="footer-main-div">
+                <div class="footer-div1" style="flex: 1;"   >
+                    <img src="{% static 'images/image59.png' %}" alt="" style="width: 300px; height: auto;">
+                    <h4>Let’s join & create something together</h4>
+                    <p>Must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and will give you completed.</p>
+                    <div class="subcription" style="margin-top: 20px;">
+                        <input type="text " name="email" placeholder="Enter your email address....." >
+                        <button type="submit"> 
+                            <i> 
+                                &#8594
+                            </i>
+                            Subscribe Us
+                        </button>
+                    </div>
+
+                </div>
+                
+                <div class="footer-div2" style="flex: 1;">
+                    <div style="padding: 0 10px;">
+                        <div >
+                        
+                            <h2 >Usefull Links</h2>
+                        </div>
+                        <div class="widget-content" style="display: flex; flex-direction: row; gap: 25px;">
+                            <ul  style="display: flex; flex-direction: column;" >
+                                <list><a href="#"></a>About Company</list>
+                                <list><a href="#"></a>Latest Projects</list>
+                                <list><a href="#"></a>Why Choose Us</list>
+                                <list><a href="#"></a>Get a Quote</list>
+                                <list><a href="#"></a>Latest From Blog</list>
+                                <list><a href="#"></a>Contact Us</list>
+                            </ul>
+                            <ul style="display: flex; flex-direction: column;" >
+                                <list><a href="#"></a>Our Services</list>
+                                <list><a href="#"></a>Testimonials</list>
+                                <list><a href="#"></a>Shop Products</list>
+                                 <list><a href="#"></a>Site Map</list>
+                                 <list><a href="#"></a>FAQ’s</list>
+                                 <list><a href="#"></a>Private Policy</list>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-div3" style="flex: 1;">
+                    <div class="footer-div3-inner-box" style="padding-right: 10px; ">
+                        <div style="display: flex; flex-direction: row;" >
+                            <div class="icon">
+                            &#x260F
+
+                            </div>
+                            <div class="text-box">
+                                <div style="border-bottom: 1px solid #313131 ;" >
+                                    <h3>For Business Dealing:</h3>
+                                    <span style="color: #FFFFFF; font-size: 20px; font-weight: 500;
+                                    display: block; font-family: 'Roboto'; color: #FFFFFF;">888-000-1234</span>
+                                    <p style="font-size: 16px; color: #999999; line-height: 24px;  margin-bottom: 10px;">Available 9:00 - 7:00 all days.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div >
+                            <div class="icon">
+                                
+                            </div>
+                            <div class="text-box">
+                                <div style="border-bottom: 1px solid #313131 ;" >
+                                    <p style="font-size: 16px; color: #999999; line-height: 24px;  margin-bottom: 10px;">
+                                        Big Smart Stareet, 2nd Cross
+                                        <br>
+                                        Newyork, USA 1002.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div >
+                            <div class="icon">
+                            </div>
+                            <div class="text-box">
+                                <div style="border-bottom: 1px solid #313131 ;" >
+                                    <h3 style="font-size: 16px; font-weight: 400; color: #FFFFFF;">
+                                        Mail Us at
+                                    </h3>
+                                    <p style="color: #999999; line-height: 24px; font-weight: 16px;">Machinery@support.com</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div> -->
+   
+    <footer style="background-color: #181818;color: #888888;">
+
+        <div style="border: 1px solid; width: 1200px; margin:auto; padding: 20px 0px;display: flex; gap: 30px;">
+            <div style="width: 400px;">
+                <img src="{% static 'images/image56.png' %}" alt="" style="width: 230px; margin-right: 30px;">
+               
+                <h3 style="font-weight: 900;padding:20px 0px;color: white;">Let’s join & create something together</h3>
+                <p style="font-size: 20px; padding-bottom: 20px; line-height: 30px;">Must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and will give you completed.</p>
+                <input type="text" placeholder="Enter your email address..." style="width:100%;display: block; margin-bottom: 20px;padding-bottom:10px;background-color: transparent; border-bottom: 1px solid #cccccc78;">
+
+                <button style="padding: 10px 0px; color:#fff;background-color: transparent; font-weight: 900; font-size: 18px;">Subscribe</button>
+            </div>
+            <div>
+                <h3 style="color: white;font-size: 25px; font-weight: 900;padding:20px 0px">Usefull Links</h3>
+                <div style="display: flex;flex-direction: row;gap:30px;margin-top:10px">
+                    <ul style="list-style: none;font-size: 17px; line-height: 30px;">
+                        <li>About Company</li>
+                        <li>About Company</li>
+                        <li>About Company</li>
+                        <li>About Company</li>
+                        <li>About Company</li>
+                        <li>About Company</li>
+                        <li>About Company</li>
+                    </ul>
+                     <ul style="list-style: none;font-size: 17px; line-height: 30px;">
+                        <li>About Company</li>
+                        <li>About Company</li>
+                        <li>About Company</li>
+                        <li>About Company</li>
+                        <li>About Company</li>
+                        <li>About Company</li>
+                        <li>About Company</li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+
+            </div>
+        </div>
+        <div class="auto-container3" style="padding: 20px 0 ; background-color: #565454;">
+            <div >
+                <div>
+                    <ul style="display: flex; flex-direction: row; gap: 30px; list-style: none; text-align: center; justify-content: space-between; align-items: center;">
+                        <li style="color: white;">Quote From Our Expert</li>
+                        <li>© 2019 All Rights Reserved by 
+                        <a  href="#" style="color: #F5BE2D; text-decoration: none;">Machinery</a></li>
+                        <li>Privacy Terms of Use Site Map</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+</html>

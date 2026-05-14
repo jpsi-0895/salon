@@ -1,0 +1,341 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BarberShop</title>
+    <link rel="stylesheet" href="{% static 'css/style3.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <body>
+         <!-- HEADER -->
+
+  <header class="header">
+    <div class="header-content">
+      <div class="logo">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOwh0nGfp2iAFj4DMenJgSv0HglMnKL4bsaw&s"  alt="" >
+        
+        <h2>Praveen Hair Salon</h2>
+      </div>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="/blogs/home/">Home</a></li>
+          <li><a href="/blogs/services/">Services</a></li>
+          <li><a href="/blogs/gallery/">Gallery</a></li>
+          <li><a href="/blogs/booking/">Booking</a></li>
+          <li><a href="/blogs/contact/">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  
+
+
+
+  </header>
+
+  <!-- HERO SECTION -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+      <h1>Modern Hair Style & Beauty Salon</h1>
+      <p>
+        Professional haircut, beard styling, hair spa and facial services
+        for men and women.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="/blogs/booking/" class="btn">Book Appointment</a>
+        <a href="/blogs/services/" class="btn btn-outline">View Services</a>
+      </div>
+    </div>
+
+  </section>
+  <!-- SERVICES -->
+
+  <section class="services">
+
+    <div class="title">
+      <h2>Our Services</h2>
+      <p>Best salon services for stylish look</p>
+    </div>
+
+    <div class="service-container">
+
+      <div class="service-box">
+        <i class="fa fa-light fa-scissors"></i>
+        <h3>Hair Cutting</h3>
+        <p>Professional haircut with modern style.</p>
+      </div>
+
+      <div class="service-box">
+        <i class="fa fa-regular fa-user"></i>
+        <h3>Beard Styling</h3>
+        <p>Stylish beard trimming and shaping.</p>
+      </div>
+
+      <div class="service-box">
+        <i class="fa fa-light fa-spa"></i>
+        <h3>Hair Spa</h3>
+        <p>Relaxing hair spa for healthy hair.</p>
+      </div>
+
+      <div class="service-box">
+        <i class="fa fa-sharp fa-regular fa-face-smile"></i>
+        <h3>Facial</h3>
+        <p>Skin care and facial treatment service.</p>
+      </div>
+      <div class="service-box">
+        <i class="fa fa-thin fa-brush"></i>
+        <h3>Hair Color</h3>
+        <p>Professional hair color with modern style.</p>
+      </div>
+
+      <div class="service-box">
+        <i class="fa fa-regular fa-user"></i>
+        <h3> Body Massage</h3>
+        <p>Relax. Renew. Refresh.</p>
+      </div>
+
+      <div class="service-box">
+        <i class="fa fa-thin fa-user-tie-hair"></i>
+        <h3>Hair Styling & Care</h3>
+        <p>Healthy and Stylish hair.</p>
+      </div>
+
+      <div class="service-box">
+        <i class="fa fa-sharp fa-regular fa-face-smile"></i>
+        <h3>Bridal & Party Makeup</h3>
+        <p>Skin care and facial treatment service.</p>
+      </div>
+      
+      
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+
+  <section class="about">
+
+    <div class="about-image">
+       <img src="{% static 'images/image16.png' %}"  alt="Shampoo">
+    </div>
+
+    <div class="about-content">
+      <h2>About Our Salon</h2>
+
+      <p>
+        Praveen Hair Salon provides professional salon services with
+        experienced staff and modern equipment. Our goal is to provide
+        the best grooming and beauty experience.
+        <br>
+        Experience a transformation that goes beyond the mirror. We blend expert artistry with a personal touch to reveal your most confident self. Our passion for detail ensures every cut, color, and treatment is a masterpiece tailored exclusively to you. Step into a sanctuary of style where your hair isn't just serviced—it's celebrated. Your best look is our highest calling.
+      </p>
+      <div class="buttons">
+        <a href="#" class="btn">Read More</a>
+        <a href="#" class="btn">Why Choose Us</a>
+      </div>
+
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+
+<!-- CALL US SECTION -->
+
+<section class="call-us">
+
+    <div class="call-content">
+        <h1>Book Your Appointment Today</h1>
+
+        <p>
+            Visit Praveen Hair Salon for stylish haircuts, beard grooming,
+            facials, and premium salon services with professional care.
+            <br>+91 9832894932
+        </p>
+        <a href="tel:+919876543210" class="call-btn">
+            Call Us Now
+        </a>
+    </div>
+
+</section>
+  <!-- PRODUCTS -->
+
+<section class="products">
+
+  <div class="title">
+    <h2>Our Products</h2>
+    <p>Professional salon products available for purchase</p>
+  </div>
+
+  <div class="product-container">
+
+    <!-- Product 1 -->
+
+    <div class="product-box">
+
+      <div class="product-image">
+        <img src="{% static 'images/image10.png' %}"  alt="Shampoo">
+      </div>
+
+      <div class="product-content">
+        <h3>Hair Shampoo</h3>
+        <p>Healthy and smooth hair shampoo.</p>
+
+        <h4>₹299</h4>
+
+        <a href="#" class="buy-btn">Buy Now</a>
+      </div>
+
+    </div>
+
+    <!-- Product 2 -->
+
+    <div class="product-box">
+
+      <div class="product-image">
+        <img src="{% static 'images/image11.png' %}" alt="Beard Oil">
+      </div>
+
+      <div class="product-content">
+        <h3>Beard Oil</h3>
+        <p>Premium beard growth oil.</p>
+
+        <h4>₹199</h4>
+
+        <a href="#" class="buy-btn">Buy Now</a>
+      </div>
+
+    </div>
+    <div class="product-box">
+
+      <div class="product-image">
+        <img src="{% static 'images/image12.png' %}" alt="Beard Oil">
+      </div>
+
+      <div class="product-content">
+        <h3>Hair Color</h3>
+        <p>Premium prodiuct for hair.</p>
+
+        <h4>₹199</h4>
+
+        <a href="#" class="buy-btn">Buy Now</a>
+      </div>
+
+    </div>
+    <div class="product-box">
+
+      <div class="product-image">
+        <img src="{% static 'images/image13.png' %}" alt="Beard Oil">
+      </div>
+
+      <div class="product-content">
+        <h3> Conditioner</h3>
+        <p>Premium hair growth product.</p>
+
+        <h4>₹199</h4>
+
+        <a href="#" class="buy-btn">Buy Now</a>
+      </div>
+
+    </div>
+    <div class="product-box">
+
+      <div class="product-image">
+        <img src="{% static 'images/image14.png' %}" alt="Beard Oil">
+      </div>
+
+      <div class="product-content">
+        <h3>Face Wash</h3>
+        <p>Premium  product.</p>
+
+        <h4>₹199</h4>
+
+        <a href="#" class="buy-btn">Buy Now</a>
+      </div>
+
+    </div>
+
+    <!-- Product 3 -->
+
+    <div class="product-box">
+
+      <div class="product-image">
+        <img src="{% static 'images/image15.png' %}" alt="Hair Wax">
+      </div>
+
+      <div class="product-content">
+        <h3>Hair Wax</h3>
+        <p>Long lasting strong hair styling wax.</p>
+
+        <h4>₹249</h4>
+
+        <a href="#" class="buy-btn">Buy Now</a>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FOOTER SECTION -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-box">
+            <h2>Praveen Hair Salon</h2>
+            <p>
+                Praveen Hair Salon provides professional hair cutting, beard styling,
+                hair spa, facial, grooming, and modern salon services with comfort,
+                hygiene, and customer satisfaction.
+            </p>
+        </div>
+
+        <div class="footer-box">
+            <h3>Our Services</h3>
+
+            <ul>
+                <li>Hair Cutting</li>
+                <li>Beard Styling</li>
+                <li>Hair Spa</li>
+                <li>Facial & Cleanup</li>
+                <li>Hair Coloring</li>
+                <li>Massage</li>
+            </ul>
+        </div>
+
+        <div class="footer-box">
+            <h3>Contact Info</h3>
+
+            <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+            <p><i class="fa-solid fa-location-dot"></i> Jodhpur, Rajasthan</p>
+            <p><i class="fa-solid fa-envelope"></i> praveensalon@gmail.com</p>
+        </div>
+
+        <div class="footer-box">
+            <h3>Opening Hours</h3>
+
+            <p>Monday - Sunday</p>
+            <p>9:00 AM - 10:00 PM</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Praveen Hair Salon | All Rights Reserved</p>
+    </div>
+
+</footer>
+
+</body>
+</html>
+        
