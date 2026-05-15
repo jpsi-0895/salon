@@ -115,7 +115,7 @@
 
   <section class="about">
     <div class="about-image">
-      <img src="{% static 'images/image16.png' %}"  alt="Salon team and clients">
+      <img src="{% static 'images/image17.png' %}"  alt="Salon team and clients" loading="lazy">
       <div class="about-badge">
         <span>Top Rated Salon</span>
       </div>
@@ -165,20 +165,26 @@
 <!-- CALL US SECTION -->
 
 <section class="call-us">
-
     <div class="call-content">
+        <div class="call-icon">
+            <i class="fa-solid fa-phone-volume"></i>
+        </div>
         <h1>Book Your Appointment Today</h1>
-
+        <p class="call-tagline">Limited Time Offer - Get 20% Off on First Appointment</p>
         <p>
             Visit Praveen Hair Salon for stylish haircuts, beard grooming,
             facials, and premium salon services with professional care.
-            <br>+91 9832894932
+            <br><span class="phone-number">+91 9832894932</span>
         </p>
-        <a href="tel:+919876543210" class="call-btn">
-            Call Us Now
-        </a>
+        <div class="call-buttons">
+            <a href="tel:+919876543210" class="call-btn">
+                <i class="fa-solid fa-phone"></i> Call Us Now
+            </a>
+            <a href="/booking/" class="call-btn call-btn-secondary">
+                <i class="fa-solid fa-calendar"></i> Book Online
+            </a>
+        </div>
     </div>
-
 </section>
   <!-- PRODUCTS -->
 
@@ -194,16 +200,23 @@
     <!-- Product 1 -->
 
     <div class="product-box">
-
+      <div class="product-badge">Best Seller</div>
       <div class="product-image">
         <img src="{% static 'images/image10.png' %}"  alt="Shampoo">
       </div>
 
       <div class="product-content">
         <h3>Hair Shampoo</h3>
+        <div class="product-rating">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star-half"></i>
+        </div>
         <p>Healthy and smooth hair shampoo.</p>
 
-        <h4>₹299</h4>
+        <h4>₹399</h4>
 
         <a href="#" class="buy-btn">Buy Now</a>
       </div>
@@ -213,16 +226,23 @@
     <!-- Product 2 -->
 
     <div class="product-box">
-
+      <div class="product-badge premium">Premium</div>
       <div class="product-image">
         <img src="{% static 'images/image11.png' %}" alt="Beard Oil">
       </div>
 
       <div class="product-content">
         <h3>Beard Oil</h3>
+        <div class="product-rating">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
         <p>Premium beard growth oil.</p>
 
-        <h4>₹199</h4>
+        <h4>₹999</h4>
 
         <a href="#" class="buy-btn">Buy Now</a>
       </div>
@@ -254,7 +274,7 @@
         <h3> Conditioner</h3>
         <p>Premium hair growth product.</p>
 
-        <h4>₹199</h4>
+        <h4>₹399</h4>
 
         <a href="#" class="buy-btn">Buy Now</a>
       </div>

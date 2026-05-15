@@ -2,15 +2,159 @@
 {% block title %}Booking - Praveen Hair Salon{% endblock %}
 {% block content %}
 
-  <section class="services">
+  <section class="booking">
+    <div class="booking-bg"></div>
+    <div class="booking-overlay"></div>
+    
     <div class="title">
-      <h2>Book an Appointment</h2>
-      <p>Reserve your slot for a haircut, facial, or spa service.</p>
+      <h2>Book Your Perfect Appointment</h2>
+      <p>Reserve your slot and get ready for a stunning transformation</p>
     </div>
-    <div class="about-content">
-      <p>Call us at <strong>+91 98328 94932</strong> or visit the salon to book your next appointment. We offer flexible time slots and priority service for advance bookings.</p>
-      <p>Choose from hair cuts, beard styling, hair spa, skincare, and beauty treatments.</p>
-      <a href="tel:+919832894932" class="btn">Call to Book</a>
+
+    <div class="booking-container">
+      <!-- Booking Benefits -->
+      <div class="booking-benefits">
+        <h3>Why Book With Us?</h3>
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fa-solid fa-clock"></i>
+            </div>
+            <h4>Save Your Time</h4>
+            <p>No waiting in queues. Reserve your exact time slot in advance.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <h4>Priority Service</h4>
+            <p>Advance bookings get priority & special discounts up to 20%.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fa-solid fa-headset"></i>
+            </div>
+            <h4>Expert Consultation</h4>
+            <p>Get professional advice on services best suited for you.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fa-solid fa-check-circle"></i>
+            </div>
+            <h4>Confirmed Booking</h4>
+            <p>Instant confirmation & reminder notifications for your appointment.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Booking Methods -->
+      <div class="booking-methods">
+        <h3>Choose Your Booking Method</h3>
+        <div class="methods-grid">
+          <!-- Phone Booking -->
+          <div class="method-card phone-method">
+            <div class="method-icon">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <h4>Call Us Now</h4>
+            <p class="method-description">Speak directly with our booking team for immediate appointments</p>
+            <div class="method-details">
+              <p class="phone-number">+91 9832894932</p>
+              <p class="hours">Available: 9 AM - 10 PM</p>
+            </div>
+            <a href="tel:+919832894932" class="method-btn">
+              <i class="fa-solid fa-phone"></i> Call Now
+            </a>
+          </div>
+
+          <!-- Online Booking -->
+          <div class="method-card online-method">
+            <div class="method-icon">
+              <i class="fa-solid fa-calendar-check"></i>
+            </div>
+            <h4>Book Online</h4>
+            <p class="method-description">Quick & easy online booking at your convenience</p>
+            <div class="method-details">
+              <p><i class="fa-solid fa-check"></i> Select service & time</p>
+              <p><i class="fa-solid fa-check"></i> Instant confirmation</p>
+            </div>
+            <a href="#" class="method-btn">
+              <i class="fa-solid fa-calendar-check"></i> Book Online
+            </a>
+          </div>
+
+          <!-- Visit Salon -->
+          <div class="method-card visit-method">
+            <div class="method-icon">
+              <i class="fa-solid fa-map-location-dot"></i>
+            </div>
+            <h4>Visit Salon</h4>
+            <p class="method-description">Walk-in bookings available with minimal wait time</p>
+            <div class="method-details">
+              <p><i class="fa-solid fa-check"></i> Open 7 days a week</p>
+              <p><i class="fa-solid fa-check"></i> Flexible timing</p>
+            </div>
+            <a href="#" class="method-btn">
+              <i class="fa-solid fa-directions"></i> Get Directions
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Services Available -->
+      <div class="booking-services">
+        <h3>Services You Can Book</h3>
+        <div class="services-list">
+          <div class="service-item">
+            <span class="service-tag">Popular</span>
+            <h4>Hair Cutting</h4>
+            <p>₹299 | 30 mins</p>
+          </div>
+          <div class="service-item">
+            <h4>Beard Styling</h4>
+            <p>₹199 | 20 mins</p>
+          </div>
+          <div class="service-item">
+            <h4>Hair Spa</h4>
+            <p>₹599 | 45 mins</p>
+          </div>
+          <div class="service-item">
+            <h4>Facial Care</h4>
+            <p>₹799 | 60 mins</p>
+          </div>
+          <div class="service-item">
+            <h4>Hair Color</h4>
+            <p>₹899 | 90 mins</p>
+          </div>
+          <div class="service-item">
+            <h4>Body Massage</h4>
+            <p>₹999 | 60 mins</p>
+          </div>
+          <div class="service-item">
+            <h4>Hair Styling & Care</h4>
+            <p>₹699 | 50 mins</p>
+          </div>
+          <div class="service-item">
+            <span class="service-tag premium">Premium</span>
+            <h4>Bridal & Party Makeup</h4>
+            <p>₹1299 | 90 mins</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Section -->
+      <div class="booking-cta">
+        <h3>Don't Wait! Book Your Slot Today</h3>
+        <p>Limited availability during peak hours. Reserve now to secure your preferred time.</p>
+        <div class="cta-buttons">
+          <a href="tel:+919832894932" class="cta-btn primary">
+            <i class="fa-solid fa-phone"></i> Call Now
+          </a>
+          <a href="#" class="cta-btn secondary">
+            <i class="fa-solid fa-calendar-check"></i> Book Online
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 

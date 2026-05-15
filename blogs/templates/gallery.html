@@ -3,34 +3,173 @@
 {% block title %}Gallery - Praveen Hair Salon{% endblock %}
 {% block content %}
 
-  <section class="services">
+  <section class="gallery">
+    <div class="gallery-bg"></div>
+    <div class="gallery-overlay"></div>
+    
     <div class="title">
-      <h2>Photo Gallery</h2>
-      <p>Explore our latest salon looks and client transformations.</p>
+      <h2>Our Work Gallery</h2>
+      <p>Explore stunning transformations and professional salon services</p>
     </div>
-    <div class="product-container">
-      <div class="product-box">
-        <div class="product-image">
-          <img src="{% static 'images/image10.png' %}" alt="Gallery Image 1">
+    
+    <div class="gallery-container">
+      <!-- Hair Cutting -->
+      <div class="gallery-item">
+        <div class="gallery-image-wrapper">
+          <img src="{% static 'images/image20.png' %}" alt="Professional Hair Cutting">
+          <div class="gallery-overlay-text">
+            <h3>Hair Cutting</h3>
+            <p>Modern Styles</p>
+          </div>
         </div>
-        <div class="product-content">
-          <p>Haircut & styling result.</p>
+        <div class="gallery-content">
+          <h3>Hair Cutting</h3>
+          <p>Professional haircuts tailored to your unique style and face shape. Our expert stylists deliver modern, trendy cuts with precision and care.</p>
+          <div class="gallery-tags">
+            <span>Expert Stylists</span>
+            <span>Modern Styles</span>
+            <span>₹299</span>
+          </div>
         </div>
       </div>
-      <div class="product-box">
-        <div class="product-image">
-          <img src="{% static 'images/image11.png' %}" alt="Gallery Image 2">
+
+      <!-- Beard Styling -->
+      <div class="gallery-item">
+        <div class="gallery-image-wrapper">
+          <img src="{% static 'images/image21.png' %}" alt="Beard Styling">
+          <div class="gallery-overlay-text">
+            <h3>Beard Styling</h3>
+            <p>Precision & Grooming</p>
+          </div>
         </div>
-        <div class="product-content">
-          <p>Professional beard styling.</p>
+        <div class="gallery-content">
+          <h3>Beard Styling</h3>
+          <p>Precision trimming and shaping for a well-groomed, clean look. Achieve the perfect beard style with our expert grooming services.</p>
+          <div class="gallery-tags">
+            <span>Precision Trim</span>
+            <span>Expert Shaping</span>
+            <span>₹199</span>
+          </div>
         </div>
       </div>
-      <div class="product-box">
-        <div class="product-image">
-          <img src="{% static 'images/image12.png' %}" alt="Gallery Image 3">
+
+      <!-- Hair Spa -->
+      <div class="gallery-item">
+        <div class="gallery-image-wrapper">
+          <img src="{% static 'images/image22.png' %}" alt="Hair Spa Treatment">
+          <div class="gallery-overlay-text">
+            <h3>Hair Spa</h3>
+            <p>Rejuvenation & Care</p>
+          </div>
         </div>
-        <div class="product-content">
-          <p>Hair spa and care experience.</p>
+        <div class="gallery-content">
+          <h3>Hair Spa</h3>
+          <p>Rejuvenating spa treatments for healthy, shiny, and deeply nourished hair. Experience luxury hair care therapy.</p>
+          <div class="gallery-tags">
+            <span>Deep Nourishment</span>
+            <span>Hair Therapy</span>
+            <span>₹599</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Facial Care -->
+      <div class="gallery-item">
+        <div class="gallery-image-wrapper">
+          <img src="{% static 'images/image23.png' %}" alt="Facial Care">
+          <div class="gallery-overlay-text">
+            <h3>Facial Care</h3>
+            <p>Glowing Skin</p>
+          </div>
+        </div>
+        <div class="gallery-content">
+          <h3>Facial Care</h3>
+          <p>Refreshing skin treatments and facials for a natural, glowing complexion. Cleanse, nourish, and rejuvenate your skin.</p>
+          <div class="gallery-tags">
+            <span>Skin Cleansing</span>
+            <span>Glow Treatment</span>
+            <span>₹799</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hair Color -->
+      <div class="gallery-item">
+        <div class="gallery-image-wrapper">
+          <img src="{% static 'images/image24.png' %}" alt="Hair Coloring">
+          <div class="gallery-overlay-text">
+            <h3>Hair Color</h3>
+            <p>Vibrant & Bold</p>
+          </div>
+        </div>
+        <div class="gallery-content">
+          <h3>Hair Color</h3>
+          <p>Professional hair coloring with premium products for vibrant, long-lasting color. Express yourself with stunning hair color.</p>
+          <div class="gallery-tags">
+            <span>Premium Colors</span>
+            <span>Long Lasting</span>
+            <span>₹899</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Body Massage -->
+      <div class="gallery-item">
+        <div class="gallery-image-wrapper">
+          <img src="{% static 'images/image25.png' %}" alt="Body Massage">
+          <div class="gallery-overlay-text">
+            <h3>Body Massage</h3>
+            <p>Relax & Refresh</p>
+          </div>
+        </div>
+        <div class="gallery-content">
+          <h3>Body Massage</h3>
+          <p>Relaxing full-body massage to rejuvenate and relieve stress and tension. Experience ultimate relaxation and renewal.</p>
+          <div class="gallery-tags">
+            <span>Full Relaxation</span>
+            <span>Stress Relief</span>
+            <span>₹999</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hair Styling & Care -->
+      <div class="gallery-item">
+        <div class="gallery-image-wrapper">
+          <img src="{% static 'images/image26.png' %}" alt="Hair Styling">
+          <div class="gallery-overlay-text">
+            <h3>Hair Styling</h3>
+            <p>Style & Confidence</p>
+          </div>
+        </div>
+        <div class="gallery-content">
+          <h3>Hair Styling & Care</h3>
+          <p>Complete hair care and styling solutions for healthy, stylish, and beautiful hair. Customize your perfect look.</p>
+          <div class="gallery-tags">
+            <span>Custom Styling</span>
+            <span>Hair Care</span>
+            <span>₹699</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bridal & Party Makeup -->
+      <div class="gallery-item">
+        <div class="gallery-image-wrapper">
+          <img src="{% static 'images/image27.png' %}" alt="Bridal Makeup">
+          <div class="gallery-overlay-text">
+            <h3>Bridal Makeup</h3>
+            <p>Your Special Day</p>
+          </div>
+        </div>
+        <div class="gallery-content">
+          <h3>Bridal & Party Makeup</h3>
+          <p>Professional makeup artistry for weddings, parties, and special occasions. Look stunning on your special day.</p>
+          <div class="gallery-tags">
+            <span>Bridal Makeup</span>
+            <span>Party Ready</span>
+            <span>₹1299</span>
+          </div>
         </div>
       </div>
     </div>

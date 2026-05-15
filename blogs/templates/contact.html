@@ -2,16 +2,169 @@
 {% block title %}Contact - Praveen Hair Salon{% endblock %}
 {% block content %}
 
-  <section class="services">
+  <section class="contact-section">
+    <div class="contact-bg"></div>
+    <div class="contact-overlay"></div>
+    
     <div class="title">
-      <h2>Contact Us</h2>
-      <p>Get in touch with Praveen Hair Salon for appointments and questions.</p>
+      <h2>Get in Touch With Us</h2>
+      <p>We're here to help! Reach out for appointments, questions, or special requests</p>
     </div>
-    <div class="about-content">
-      <p><i class="fa-solid fa-phone"></i> Phone: +91 98765 43210</p>
-      <p><i class="fa-solid fa-envelope"></i> Email: praveensalon@gmail.com</p>
-      <p><i class="fa-solid fa-location-dot"></i> Address: Jodhpur, Rajasthan</p>
-      <a href="tel:+919876543210" class="btn">Call Now</a>
+
+    <div class="contact-container">
+      <!-- Contact Information Cards -->
+      <div class="contact-info-section">
+        <h3>Contact Information</h3>
+        <div class="info-cards-grid">
+          <!-- Phone -->
+          <div class="info-card">
+            <div class="info-icon">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <h4>Call Us</h4>
+            <p class="info-subtitle">24/7 Available</p>
+            <p class="info-content">+91 9832894932</p>
+            <a href="tel:+919832894932" class="info-btn">
+              <i class="fa-solid fa-phone"></i> Call Now
+            </a>
+          </div>
+
+          <!-- Email -->
+          <div class="info-card">
+            <div class="info-icon">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <h4>Email Us</h4>
+            <p class="info-subtitle">Quick Response</p>
+            <p class="info-content">praveensalon@gmail.com</p>
+            <a href="mailto:praveensalon@gmail.com" class="info-btn">
+              <i class="fa-solid fa-envelope"></i> Send Email
+            </a>
+          </div>
+
+          <!-- Location -->
+          <div class="info-card">
+            <div class="info-icon">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <h4>Visit Salon</h4>
+            <p class="info-subtitle">Jodhpur, Rajasthan</p>
+            <p class="info-content">5 Star Salon Complex</p>
+            <a href="#" class="info-btn">
+              <i class="fa-solid fa-map"></i> Get Directions
+            </a>
+          </div>
+
+          <!-- Response Time -->
+          <div class="info-card">
+            <div class="info-icon">
+              <i class="fa-solid fa-clock"></i>
+            </div>
+            <h4>Response Time</h4>
+            <p class="info-subtitle">Fast Support</p>
+            <p class="info-content">Within 1 hour</p>
+            <a href="#" class="info-btn">
+              <i class="fa-solid fa-message"></i> Message
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Business Hours & Details -->
+      <div class="contact-details-section">
+        <div class="details-row">
+          <div class="detail-card hours-card">
+            <h3>
+              <i class="fa-solid fa-calendar-days"></i> Business Hours
+            </h3>
+            <div class="hours-list">
+              <div class="hour-item">
+                <span class="day">Monday - Friday</span>
+                <span class="time">9:00 AM - 9:00 PM</span>
+              </div>
+              <div class="hour-item">
+                <span class="day">Saturday</span>
+                <span class="time">9:00 AM - 10:00 PM</span>
+              </div>
+              <div class="hour-item">
+                <span class="day">Sunday</span>
+                <span class="time">10:00 AM - 8:00 PM</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="detail-card services-card">
+            <h3>
+              <i class="fa-solid fa-concierge-bell"></i> Special Services
+            </h3>
+            <ul class="services-list">
+              <li><i class="fa-solid fa-check"></i> Online Booking Available</li>
+              <li><i class="fa-solid fa-check"></i> Home Service Available</li>
+              <li><i class="fa-solid fa-check"></i> Group Discounts</li>
+              <li><i class="fa-solid fa-check"></i> Custom Packages</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    <!-- Quick Contact Form -->
+    <div class="contact-form-section">
+      <h3>Send Us a Message</h3>
+      <p class="form-subtitle">We'd love to hear from you. Send us your query and we'll respond within 1 hour.</p>
+      <form class="contact-form">
+        <div class="form-group">
+          <input type="text" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+          <input type="tel" placeholder="Phone Number" required>
+        </div>
+        <div class="form-group full">
+          <textarea placeholder="Your Message..." rows="5" required></textarea>
+        </div>
+        <button type="submit" class="form-submit-btn">
+          <i class="fa-solid fa-paper-plane"></i> Send Message
+        </button>
+      </form>
+    </div>
+
+      <!-- Social Media & CTA -->
+      <div class="contact-social-section">
+        <div class="social-cta">
+          <h3>Connect With Us On Social Media</h3>
+          <p>Follow us for latest trends, offers, and salon updates</p>
+          <div class="social-links">
+            <a href="#" class="social-btn facebook">
+              <i class="fa-brands fa-facebook-f"></i> Facebook
+            </a>
+            <a href="#" class="social-btn instagram">
+              <i class="fa-brands fa-instagram"></i> Instagram
+            </a>
+            <a href="#" class="social-btn whatsapp">
+              <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="#" class="social-btn twitter">
+              <i class="fa-brands fa-twitter"></i> Twitter
+            </a>
+          </div>
+        </div>
+
+        <!-- Final CTA -->
+        <div class="final-cta">
+          <h3>Ready to Transform Your Look?</h3>
+          <p>Book your appointment today and experience premium salon services</p>
+          <div class="final-buttons">
+            <a href="/booking/" class="final-btn primary">
+              <i class="fa-solid fa-calendar-check"></i> Book Now
+            </a>
+            <a href="tel:+919832894932" class="final-btn secondary">
+              <i class="fa-solid fa-phone"></i> Call Us
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 

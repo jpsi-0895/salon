@@ -1,32 +1,152 @@
 {% extends "base.html" %}
+{% load static %}
 {% block title %}Services - Praveen Hair Salon{% endblock %}
 {% block content %}
 
   <section class="services">
+    <div class="services-bg"></div>
+    <div class="services-overlay"></div>
+    
     <div class="title">
-      <h2>Salon Services</h2>
-      <p>Professional styling and grooming services for every look.</p>
+      <h2>Our Premium Services</h2>
+      <p>Professional salon services with expert stylists and premium care</p>
     </div>
+    
     <div class="service-container">
       <div class="service-box">
-        <i class="fa fa-light fa-scissors"></i>
+        <div class="service-icon">
+          <i class="fa-solid fa-scissors"></i>
+        </div>
         <h3>Hair Cutting</h3>
-        <p>Modern haircuts tailored to your style.</p>
+        <p class="service-description">Modern haircuts tailored to your unique style and face shape.</p>
+        <div class="service-features">
+          <span><i class="fa-solid fa-check"></i> Expert Stylists</span>
+          <span><i class="fa-solid fa-check"></i> Modern Styles</span>
+        </div>
+        <div class="service-price">
+          <span class="price">₹299</span>
+          <span class="duration">30 mins</span>
+        </div>
+        <a href="/booking/" class="service-btn">Book Now</a>
       </div>
+
       <div class="service-box">
-        <i class="fa fa-regular fa-user"></i>
+        <div class="service-icon">
+          <i class="fa-solid fa-face-smile"></i>
+        </div>
         <h3>Beard Styling</h3>
-        <p>Precision trimming and shaping for a clean look.</p>
+        <p class="service-description">Precision trimming and shaping for a well-groomed, clean look.</p>
+        <div class="service-features">
+          <span><i class="fa-solid fa-check"></i> Precision Trim</span>
+          <span><i class="fa-solid fa-check"></i> Expert Shaping</span>
+        </div>
+        <div class="service-price">
+          <span class="price">₹199</span>
+          <span class="duration">20 mins</span>
+        </div>
+        <a href="/booking/" class="service-btn">Book Now</a>
       </div>
+
       <div class="service-box">
-        <i class="fa fa-light fa-spa"></i>
+        <div class="service-icon">
+          <i class="fa-solid fa-droplet"></i>
+        </div>
         <h3>Hair Spa</h3>
-        <p>Rejuvenating treatments for healthy, shiny hair.</p>
+        <p class="service-description">Rejuvenating spa treatments for healthy, shiny, and nourished hair.</p>
+        <div class="service-features">
+          <span><i class="fa-solid fa-check"></i> Deep Nourishment</span>
+          <span><i class="fa-solid fa-check"></i> Hair Therapy</span>
+        </div>
+        <div class="service-price">
+          <span class="price">₹599</span>
+          <span class="duration">45 mins</span>
+        </div>
+        <a href="/booking/" class="service-btn">Book Now</a>
       </div>
+
       <div class="service-box">
-        <i class="fa fa-sharp fa-regular fa-face-smile"></i>
+        <div class="service-icon">
+          <i class="fa-solid fa-face-grin-stars"></i>
+        </div>
         <h3>Facial Care</h3>
-        <p>Refreshing skin treatments for a natural glow.</p>
+        <p class="service-description">Refreshing skin treatments and facials for a natural, glowing complexion.</p>
+        <div class="service-features">
+          <span><i class="fa-solid fa-check"></i> Skin Cleansing</span>
+          <span><i class="fa-solid fa-check"></i> Glow Treatment</span>
+        </div>
+        <div class="service-price">
+          <span class="price">₹799</span>
+          <span class="duration">60 mins</span>
+        </div>
+        <a href="/booking/" class="service-btn">Book Now</a>
+      </div>
+
+      <div class="service-box">
+        <div class="service-icon">
+          <i class="fa-solid fa-palette"></i>
+        </div>
+        <h3>Hair Color</h3>
+        <p class="service-description">Professional hair coloring with premium products for vibrant, lasting color.</p>
+        <div class="service-features">
+          <span><i class="fa-solid fa-check"></i> Premium Colors</span>
+          <span><i class="fa-solid fa-check"></i> Long Lasting</span>
+        </div>
+        <div class="service-price">
+          <span class="price">₹899</span>
+          <span class="duration">90 mins</span>
+        </div>
+        <a href="/booking/" class="service-btn">Book Now</a>
+      </div>
+
+      <div class="service-box">
+        <div class="service-icon">
+          <i class="fa-solid fa-hand"></i>
+        </div>
+        <h3>Body Massage</h3>
+        <p class="service-description">Relaxing full-body massage to rejuvenate and relieve stress and tension.</p>
+        <div class="service-features">
+          <span><i class="fa-solid fa-check"></i> Full Relaxation</span>
+          <span><i class="fa-solid fa-check"></i> Stress Relief</span>
+        </div>
+        <div class="service-price">
+          <span class="price">₹999</span>
+          <span class="duration">60 mins</span>
+        </div>
+        <a href="/booking/" class="service-btn">Book Now</a>
+      </div>
+
+      <div class="service-box">
+        <div class="service-icon">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+        </div>
+        <h3>Hair Styling & Care</h3>
+        <p class="service-description">Complete hair care and styling solutions for healthy, stylish, and beautiful hair.</p>
+        <div class="service-features">
+          <span><i class="fa-solid fa-check"></i> Custom Styling</span>
+          <span><i class="fa-solid fa-check"></i> Hair Care</span>
+        </div>
+        <div class="service-price">
+          <span class="price">₹699</span>
+          <span class="duration">50 mins</span>
+        </div>
+        <a href="/booking/" class="service-btn">Book Now</a>
+      </div>
+
+      <div class="service-box">
+        <div class="service-icon">
+          <i class="fa-solid fa-flower"></i>
+        </div>
+        <h3>Bridal & Party Makeup</h3>
+        <p class="service-description">Professional makeup artistry for weddings, parties, and special occasions.</p>
+        <div class="service-features">
+          <span><i class="fa fa-solid fa-check"></i> Bridal Makeup</span>
+          <span><i class="fa fa-solid fa-check"></i> Party Ready</span>
+        </div>
+        <div class="service-price">
+          <span class="price">₹1299</span>
+          <span class="duration">90 mins</span>
+        </div>
+        <a href="/booking/" class="service-btn">Book Now</a>
       </div>
     </div>
   </section>
