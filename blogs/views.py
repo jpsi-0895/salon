@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .forms import ContactForm
 
 # Home page view
 def home(request):
@@ -18,4 +19,16 @@ def booking(request):
     return render(request, 'booking.html')
 
 def contact(request):
-    return render(request, 'contact.html')
+    success = False
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            success = True
+            form = ContactForm()
+    else:
+        form = ContactForm()
+
+    return render(request, 'contact.html', {
+        'form': form,
+        'success': success,
+    })

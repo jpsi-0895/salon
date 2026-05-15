@@ -111,18 +111,36 @@
     <div class="contact-form-section">
       <h3>Send Us a Message</h3>
       <p class="form-subtitle">We'd love to hear from you. Send us your query and we'll respond within 1 hour.</p>
-      <form class="contact-form">
+      {% if success %}
+        <div class="contact-success">
+          <p>Thank you! Your message has been received. We will contact you shortly.</p>
+        </div>
+      {% endif %}
+      <form method="post" class="contact-form" novalidate>
+        {% csrf_token %}
         <div class="form-group">
-          <input type="text" placeholder="Your Name" required>
+          {{ form.name }}
+          {% if form.name.errors %}
+            <div class="field-error">{{ form.name.errors.0 }}</div>
+          {% endif %}
         </div>
         <div class="form-group">
-          <input type="email" placeholder="Your Email" required>
+          {{ form.email }}
+          {% if form.email.errors %}
+            <div class="field-error">{{ form.email.errors.0 }}</div>
+          {% endif %}
         </div>
         <div class="form-group">
-          <input type="tel" placeholder="Phone Number" required>
+          {{ form.phone }}
+          {% if form.phone.errors %}
+            <div class="field-error">{{ form.phone.errors.0 }}</div>
+          {% endif %}
         </div>
         <div class="form-group full">
-          <textarea placeholder="Your Message..." rows="5" required></textarea>
+          {{ form.message }}
+          {% if form.message.errors %}
+            <div class="field-error">{{ form.message.errors.0 }}</div>
+          {% endif %}
         </div>
         <button type="submit" class="form-submit-btn">
           <i class="fa-solid fa-paper-plane"></i> Send Message
